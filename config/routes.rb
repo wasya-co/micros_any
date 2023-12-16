@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: 'application#home'
 
 
-  mount WcoHosting::Engine,      :at => '/hosting'
+  mount IronWarbler::Engine,      :at => '/trading'
 
   devise_for :users, controllers: {
     omniauth_callbacks: 'users/omniauth_callbacks',
