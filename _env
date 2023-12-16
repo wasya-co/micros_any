@@ -1,6 +1,3 @@
 
-export PORT=3002
+export PORT=3005
 
-# export WP_HOST=https://piousbox.com
-# export WP_USERNAME=
-# export WP_PASSWORD=

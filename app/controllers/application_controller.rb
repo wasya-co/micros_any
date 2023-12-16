@@ -13,12 +13,4 @@ class ApplicationController < ActionController::Base
   ##
   private
 
-  def initialize
-    Keycloak.proc_cookie_token = lambda do
-      cookies.permanent[:keycloak_token]
-    end
-
-    super
-  end
-
 end

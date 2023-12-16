@@ -23,7 +23,8 @@ gem "omniauth-rails_csrf_protection", "~> 1.0.1" # required by wco_email, by key
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
-gem 'wco_email', github: 'wasya-co/wco_email_rb', branch: '0.0.0'
+gem 'ish_models',     github: 'wasya-co/ish_models', branch: '3.1.0'
+gem 'wco_hosting_be', github: 'wasya-co/wco_hosting_rb', branch: '0.0.0'
 
 group :development, :test do
   gem 'byebug'
