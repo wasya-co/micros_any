@@ -1,31 +1,16 @@
 GIT
   remote: https://github.com/wasya-co/iron_warbler.git
-  revision: d428404e83072b43fcc9d32b6ca505c85efd862f
-  branch: 2.0.0
+  revision: 5fe58349cf2af7ec41973851bddaa2c0b38a8e57
+  branch: 2.0.7
   specs:
-    iron_warbler (2.0.5)
+    iron_warbler (2.0.7.3)
       cancancan (~> 3.4.0)
       haml (~> 5.2.0)
       httparty (~> 0.21.0)
       jbuilder (~> 2.11.0)
-      jwt (~> 2.3.0)
       mysql2 (~> 0.5.5)
       rails (~> 6.1.0)
-
-GIT
-  remote: https://github.com/wasya-co/ish_models.git
-  revision: 67be10c8443f70be6eb961063ddc8082a227362f
-  branch: 3.1.0
-  specs:
-    ish_models (3.1.0.4)
-      kaminari-mongoid (~> 1.0.1)
-      mongoid (~> 7.3.0)
-      mongoid-autoinc (~> 6.0)
-      mongoid-paperclip
-      mongoid_paranoia
-      net-scp (~> 4.0.0)
-      net-ssh (~> 7.2.0)
-      rails (~> 6.1.0)
+      sass-rails (~> 6.0.0)
 
 GEM
   remote: https://rubygems.org/
@@ -186,8 +171,6 @@ GEM
       net-protocol
     net-protocol (0.2.2)
       timeout
-    net-scp (4.0.0)
-      net-ssh (>= 2.6.5, < 8.0.0)
     net-smtp (0.4.0)
       net-protocol
     net-ssh (7.2.0)
@@ -326,7 +309,6 @@ DEPENDENCIES
   byebug
   devise (~> 4.9.3)
   iron_warbler!
-  ish_models!
   jbuilder (~> 2.7)
   kaminari-mongoid (~> 1.0.1)
   mongoid (~> 7.3.0)
