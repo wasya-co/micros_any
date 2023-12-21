@@ -8,17 +8,18 @@ set :deploy_to,   "/opt/projects/micros_trading"
 
 append :linked_files, "log/production.log",
   "config/database.yml",
+  "config/master.key",
   "config/mongoid.yml",
   "config/initializers/00_s3.rb",
   # "config/initializers/05_stripe.rb",
   "config/initializers/08_integrations.rb",
   "config/initializers/action_mailer.rb",
-  ".env"
+  ".bundle/config"
 
 namespace :deploy do
   task :bundle do
     on roles(:web) do
-      execute "cd #{fetch(:deploy_to)}/current && . .env && /root/.rbenv/shims/bundle "
+      execute "cd #{fetch(:deploy_to)}/current && /root/.rbenv/shims/bundle && RAILS_ENV=production bundle exec rake assets:precompile"
     end
   end
 end
