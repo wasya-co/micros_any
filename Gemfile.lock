@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/wasya-co/iron_warbler.git
-  revision: 2fc45823153b757aa2d148c5446402a120c12417
+  revision: 16b52bae7ba1d29b9e803137a3572d393a0e17fe
   branch: 2.0.7
   specs:
-    iron_warbler (2.0.7.6)
+    iron_warbler (2.0.7.7)
       cancancan (~> 3.4.0)
       exception_notification (~> 4.5.0)
       haml (~> 5.2.0)
@@ -325,6 +325,7 @@ DEPENDENCIES
   byebug
   capistrano
   devise (~> 4.9.3)
+  exception_notification (~> 4.5.0)
   iron_warbler!
   jbuilder (~> 2.7)
   kaminari-mongoid (~> 1.0.1)
