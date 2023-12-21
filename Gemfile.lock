@@ -1,10 +1,11 @@
 GIT
   remote: https://github.com/wasya-co/iron_warbler.git
-  revision: bbb1ccf30e84d62c747f8a9fb88e19499eb09e43
+  revision: 2fc45823153b757aa2d148c5446402a120c12417
   branch: 2.0.7
   specs:
-    iron_warbler (2.0.7.5)
+    iron_warbler (2.0.7.6)
       cancancan (~> 3.4.0)
+      exception_notification (~> 4.5.0)
       haml (~> 5.2.0)
       httparty (~> 0.21.0)
       jbuilder (~> 2.11.0)
@@ -102,6 +103,9 @@ GEM
       warden (~> 1.2.3)
     diff-lcs (1.5.0)
     erubi (1.12.0)
+    exception_notification (4.5.0)
+      actionmailer (>= 5.2, < 8)
+      activesupport (>= 5.2, < 8)
     faraday (2.7.12)
       base64
       faraday-net_http (>= 2.0, < 3.1)
