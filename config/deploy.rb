@@ -19,7 +19,7 @@ append :linked_files, "log/production.log",
 namespace :deploy do
   task :bundle do
     on roles(:web) do
-      execute "cd #{fetch(:deploy_to)}/current && /root/.rbenv/shims/bundle && RAILS_ENV=production bundle exec rake assets:precompile"
+      execute "cd #{fetch(:deploy_to)}/current && /root/.rbenv/shims/bundle && RAILS_ENV=production /root/.rbenv/shims/bundle exec rake assets:precompile"
     end
   end
 end
