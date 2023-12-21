@@ -2,6 +2,8 @@
 Rails.application.routes.draw do
   root to: 'application#home'
 
+  get 'test-exception', to: 'application#test_exception'
+
 
   mount Iro::Engine,      :at => '/trading'
 

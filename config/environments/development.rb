@@ -74,7 +74,7 @@ end
 Rails.application.config.middleware.use ExceptionNotification::Rack,
   email: {
     deliver_with: :deliver,
-    email_prefix: '[M3] ',
+    email_prefix: '[Iro] ',
     sender_address: %{"m3 exceptionist" <no-reply@wasya.co>},
     exception_recipients: %w{poxlovi@gmail.com}
   }

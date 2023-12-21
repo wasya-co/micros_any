@@ -8,6 +8,10 @@ class ApplicationController < ActionController::Base
     # end
   end
 
+  def test_exception
+    throw 'test exception'
+  end
+
   ##
   ## private
   ##
