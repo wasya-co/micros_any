@@ -2,8 +2,10 @@
 
 set -ex
 
+bundle
+
 git add .
 git commit -m 'autocommit'
 git push
 
-be cap do3 deploy
+bundle exec cap do3 deploy
