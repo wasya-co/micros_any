@@ -31,9 +31,10 @@ group :development, :test do
 end
 
 group :development do
-  gem 'web-console', '>= 4.1.0'
-  ## https://github.com/MiniProfiler/rack-mini-profiler/blob/master/README.md
-  gem 'rack-mini-profiler', '~> 2.0'
 
+  gem 'rack-mini-profiler', '~> 2.0'
+  gem 'web-console',        '>= 4.1.0'
+
+  gem 'capistrano'
 end
 
