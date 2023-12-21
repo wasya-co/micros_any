@@ -21,7 +21,8 @@ gem "omniauth-rails_csrf_protection", "~> 1.0.1"
 # gem 'keycloak',                       "~> 3.0.0"
 
 # gem 'ish_models',   github: 'wasya-co/ish_models',   branch: '3.1.0'
-gem 'iron_warbler', github: 'wasya-co/iron_warbler', branch: '2.0.7'
+# gem 'iron_warbler', github: 'wasya-co/iron_warbler', branch: '2.0.7'
+gem 'iron_warbler', git: "https://#{ENV['GITHUB_TOKEN']}:x-oauth-basic@github.com/wasya-co/iron_warbler.git", branch: '2.0.7'
 
 group :development, :test do
   gem 'byebug'
