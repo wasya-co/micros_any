@@ -1,5 +1,5 @@
 GIT
-  remote: https://:x-oauth-basic@github.com/wasya-co/iron_warbler.git
+  remote: https://github.com/wasya-co/iron_warbler.git
   revision: 5fe58349cf2af7ec41973851bddaa2c0b38a8e57
   branch: 2.0.7
   specs:
