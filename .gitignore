@@ -3,7 +3,9 @@
 .byebug_history
 
 config/initializers/00_s3.rb
-/config/master.key
+config/initializers/08_integrations.rb
+config/initializers/action_mailer.rb
+config/master.key
 
 /db/*.sqlite3
 /db/*.sqlite3-*
