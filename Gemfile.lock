@@ -15,10 +15,10 @@ GIT
 
 GIT
   remote: https://github.com/wasya-co/wco_hosting_rb.git
-  revision: 3fbc8f0e43ee6d6341adfb64fbcba7615dedadc1
+  revision: 8c9bf806a5a443bfb9d0a6e1c277391e42d45715
   branch: 0.0.0
   specs:
-    wco_hosting (0.0.0.3)
+    wco_hosting (0.0.0.4)
       cancancan (~> 3.5.0)
       devise (~> 4.9.3)
       haml (~> 6.3.0)
