@@ -8,6 +8,7 @@ gem 'puma', '~> 5.0'
 gem 'sass-rails'
 gem 'jbuilder', '~> 2.7'
 gem 'bcrypt', '~> 3.1.7'
+gem 'exception_notification'
 
 gem 'mongoid',           '~> 7.3.0'
 gem 'mongoid_paranoia',  '~> 0.6.0'
