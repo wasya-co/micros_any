@@ -20,6 +20,7 @@ namespace :deploy do
   task :bundle do
     on roles(:web) do
       execute "cd #{fetch(:deploy_to)}/current && /root/.rbenv/shims/bundle && RAILS_ENV=production /root/.rbenv/shims/bundle exec rake assets:precompile"
+      execute "nginx -s reload"
     end
   end
 end
