@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/wasya-co/wco_hosting_rb.git
-  revision: e3b0e111d329d22a97adc94ee2ddacad1def56d6
+  revision: 410b81eb59c2c449e27ea57e7fe3e85591be30ed
   branch: 0.0.0
   specs:
-    wco_hosting (0.0.0.8)
+    wco_hosting (0.0.0.9)
       cancancan (~> 3.5.0)
       devise (~> 4.9.3)
       haml (~> 6.3.0)
