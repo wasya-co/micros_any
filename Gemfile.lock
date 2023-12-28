@@ -21,10 +21,10 @@ GIT
 
 GIT
   remote: https://github.com/wasya-co/wco_models.git
-  revision: 3d6daf6e556b223a140187874a8ab5e0283a00db
+  revision: adac704ab9f08ca0b07e680f29fc2ce8735ca2c2
   branch: 3.1.0
   specs:
-    wco_models (3.1.0.36)
+    wco_models (3.1.0.37)
       aws-sdk-s3
       cancancan (~> 3.5.0)
       devise (~> 4.9.3)
