@@ -21,9 +21,8 @@ gem "omniauth-keycloak",              "~> 1.5.1"
 gem "omniauth-rails_csrf_protection", "~> 1.0.1"
 # gem 'keycloak',                       "~> 3.0.0"
 
-gem 'ish_models',  github: 'wasya-co/ish_models',     branch: '3.1.0'
+gem 'wco_models',  github: 'wasya-co/wco_models',     branch: '3.1.0'
 gem 'wco_hosting', github: 'wasya-co/wco_hosting_rb', branch: '0.0.0'
-# gem 'ish_manager', github: 'wasya-co/ish_manager',    branch: '2.2.0'
 
 group :development, :test do
   gem 'byebug'
