@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/wasya-co/wco_hosting_rb.git
-  revision: 80b356060c2d42213bb5349f15bba60e1ea01464
+  revision: 8763b8bcb2564faf4cecdf4ccd6537f265916494
   branch: 0.0.0
   specs:
-    wco_hosting (0.0.0.6)
+    wco_hosting (0.0.0.7)
       cancancan (~> 3.5.0)
       devise (~> 4.9.3)
       haml (~> 6.3.0)
@@ -21,10 +21,10 @@ GIT
 
 GIT
   remote: https://github.com/wasya-co/wco_models.git
-  revision: 8c7ddb50febc2ed48496a49fa6d781b3f466320e
+  revision: 981442865676e58a084b326dc86bb1c312d2b552
   branch: 3.1.0
   specs:
-    wco_models (3.1.0.33)
+    wco_models (3.1.0.34)
       aws-sdk-s3
       cancancan (~> 3.5.0)
       devise (~> 4.9.3)
