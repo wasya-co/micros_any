@@ -5,7 +5,7 @@ ruby '2.7.5'
 
 gem 'rails', '~> 6.1.0'
 gem 'puma', '~> 5.0'
-gem 'sass-rails', '>= 6'
+gem 'sass-rails'
 gem 'jbuilder', '~> 2.7'
 gem 'bcrypt', '~> 3.1.7'
 
@@ -23,16 +23,25 @@ gem "omniauth-rails_csrf_protection", "~> 1.0.1" # required by wco_email, by key
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
-gem 'wco_email', github: 'wasya-co/wco_email_rb', branch: '0.0.0'
+gem 'wco_models', github: 'wasya-co/ish_models',   branch: '3.1.0'
+gem 'wco_email',  github: 'wasya-co/wco_email_rb', branch: '0.0.0'
 
 group :development, :test do
   gem 'byebug'
   gem 'rspec-rails'
+
+  gem 'capybara'
+  gem 'selenium-webdriver', "~> 4.9.0"
+
+  ## From: https://stackoverflow.com/questions/24004728/getting-selenium-webdriver-to-use-chrome-in-rspec-rails
+  # gem 'chromedriver-helper'
 end
 
 group :development do
   gem 'web-console', '>= 4.1.0'
   ## https://github.com/MiniProfiler/rack-mini-profiler/blob/master/README.md
   gem 'rack-mini-profiler', '~> 2.0'
+
+
 end
 

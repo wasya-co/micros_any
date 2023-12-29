@@ -36,3 +36,4 @@ yarn-debug.log*
 vendor
 
 w
+.DS_Store
