@@ -2,10 +2,16 @@
 require 'capybara/rspec'
 
 Capybara.register_driver :selenium_chrome do |app|
-  Capybara::Selenium::Driver.new(app, :browser => :chrome, headless: true )
+  # options = Selenium::WebDriver::Chrome::Options.new
+  # options.add_argument '--remote-debugging-port=4444'
+  # Capybara::Selenium::Driver.new(app,
+  #   browser: :chrome,
+  #   options: options )
+
+  Capybara::Selenium::Driver.new app, browser: :chrome
 end
 
-Capybara.default_driver = :selenium_chrome_headless
+Capybara.default_driver = :selenium_chrome
 Capybara.default_max_wait_time = 100 # seconds
 
 RSpec.describe 'fedfis test 1' do
@@ -16,7 +22,8 @@ RSpec.describe 'fedfis test 1' do
 
   it 'sanity' do
 
-    visit 'http://localhost:3000'
+    # visit 'http://localhost:3000'
+    visit 'http://192.168.56.1:3000'
     fill_in('username', with: 'piousbox')
     fill_in('password', with: 'test1234')
     click_on('Sign In')
