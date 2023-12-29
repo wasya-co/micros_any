@@ -23,7 +23,7 @@ RSpec.describe 'fedfis test 1' do
   it 'sanity' do
 
     # visit 'http://localhost:3000'
-    visit 'http://192.168.56.1:3000'
+    visit 'http://localhost2:3000'
     fill_in('username', with: 'piousbox')
     fill_in('password', with: 'test1234')
     click_on('Sign In')
