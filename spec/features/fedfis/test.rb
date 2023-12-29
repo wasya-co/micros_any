@@ -2,10 +2,10 @@
 require 'capybara/rspec'
 
 Capybara.register_driver :selenium_chrome do |app|
-  Capybara::Selenium::Driver.new(app, :browser => :chrome)
+  Capybara::Selenium::Driver.new(app, :browser => :chrome, headless: true )
 end
 
-Capybara.default_driver = :selenium_chrome
+Capybara.default_driver = :selenium_chrome_headless
 Capybara.default_max_wait_time = 100 # seconds
 
 RSpec.describe 'fedfis test 1' do
