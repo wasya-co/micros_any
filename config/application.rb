@@ -9,6 +9,8 @@ require "sprockets/railtie"
 
 Bundler.require(*Rails.groups)
 
+require 'wco_models'
+
 module MicrosEmail
   class Application < Rails::Application
     config.load_defaults 6.1
