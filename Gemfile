@@ -7,7 +7,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'devise',                         "~> 4.9.3"
 gem 'jbuilder', '~> 2.7'
 gem 'kaminari-mongoid',  '~> 1.0.1'
-gem 'psych', '~> 4.0'
+gem 'psych', '~> 5.0'
 gem 'puma', '~> 5.0'
 gem 'rails', '~> 6.1.0'
 gem 'sass-rails'
