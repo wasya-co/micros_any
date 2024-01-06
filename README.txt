@@ -7,6 +7,7 @@
 
   apt install -y \
     libyaml-dev
+  apt upgrade libyaml-dev
 
   sudo gem update # or:
   # gem install rubygems-update
