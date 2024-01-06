@@ -474,6 +474,7 @@ DEPENDENCIES
   mongoid-autoinc (~> 6.0.3)
   mongoid-paperclip (~> 0.1.0)
   mongoid_paranoia (~> 0.6.0)
+  nokogiri (~> 1.15.5)
   omniauth-keycloak (~> 1.5.1)
   omniauth-rails_csrf_protection (~> 1.0.1)
   psych (~> 5.0.1)

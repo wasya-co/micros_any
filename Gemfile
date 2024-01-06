@@ -15,6 +15,7 @@ gem 'mongoid',           '~> 7.3.0'
 gem 'mongoid_paranoia',  '~> 0.6.0'
 gem 'mongoid-autoinc',   '~> 6.0.3'
 gem 'mongoid-paperclip', '~> 0.1.0'
+gem 'nokogiri', '~> 1.15.5'
 gem "omniauth-keycloak",              "~> 1.5.1"
 gem "omniauth-rails_csrf_protection", "~> 1.0.1" # required by wco_email, by keycloak to be in the host app.
 
