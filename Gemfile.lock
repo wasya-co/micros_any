@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/wasya-co/wco_email_rb.git
-  revision: 08cc75cdbb8fca6da060b2279ecb244fde042a31
+  revision: 7430d39005bf1265379716a032778ec3c1aa9f38
   branch: 0.0.0
   specs:
     wco_email (0.1.0.0)
@@ -26,10 +26,10 @@ GIT
 
 GIT
   remote: https://github.com/wasya-co/wco_models.git
-  revision: f7238c6dce1486ac0096759ddf1a86138ec09bfc
+  revision: 1763baad483ed51fc30ebbe4c9fd4d6b85f2b732
   branch: 3.1.0
   specs:
-    wco_models (3.1.0.38)
+    wco_models (3.1.0.39)
       aws-sdk-s3
       business_time
       cancancan (~> 3.5.0)
@@ -38,6 +38,7 @@ GIT
       droplet_kit (~> 3.20.0)
       haml (~> 6.3.0)
       httparty
+      kaminari-actionview
       kaminari-mongoid (~> 1.0.1)
       mongoid (~> 7.3.0)
       mongoid-autoinc (~> 6.0)
@@ -119,13 +120,13 @@ GEM
     airbrussh (1.5.0)
       sshkit (>= 1.6.1, != 1.7.0)
     aws-eventstream (1.3.0)
-    aws-partitions (1.876.0)
+    aws-partitions (1.877.0)
     aws-sdk-core (3.190.1)
       aws-eventstream (~> 1, >= 1.3.0)
       aws-partitions (~> 1, >= 1.651.0)
       aws-sigv4 (~> 1.8)
       jmespath (~> 1, >= 1.6.1)
-    aws-sdk-kms (1.75.0)
+    aws-sdk-kms (1.76.0)
       aws-sdk-core (~> 3, >= 3.188.0)
       aws-sigv4 (~> 1.1)
     aws-sdk-s3 (1.142.0)
