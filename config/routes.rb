@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
 
   mount Iro::Engine,      :at => '/trading'
+  mount Wco::Engine,      :at => '/wco'
 
   devise_for :users, controllers: {
     omniauth_callbacks: 'users/omniauth_callbacks',

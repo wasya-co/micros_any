@@ -1,0 +1,27 @@
+!!!
+%html
+  %head
+    %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
+    %title #{@page_title} | Micros Trading
+    %meta{content: "width=device-width,initial-scale=1", name: "viewport"}
+    = csrf_meta_tags
+    = csp_meta_tag
+    -# = stylesheet_link_tag 'application', media: 'all'
+    -# = javascript_tag 'application'
+
+  %body
+    %h5 Micros Trading
+    %hr
+
+    = render 'alerts_notices' if notice || alert
+
+    %hr
+    = yield
+    %hr
+
+    - if current_user
+      .flex-row
+        = current_user.email
+        = button_to 'Sign Out', destroy_user_session_path, method: :delete, data: { confirm: 'Are you sure?' }
+    - else
+      = button_to 'Login', "/users/auth/keycloakopenid", method: :post

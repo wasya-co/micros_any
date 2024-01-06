@@ -19,28 +19,20 @@ gem 'kaminari-mongoid',  '~> 1.0.1'
 gem 'devise',                         "~> 4.9.3"
 gem "omniauth-keycloak",              "~> 1.5.1"
 gem "omniauth-rails_csrf_protection", "~> 1.0.1"
-# gem 'keycloak',                       "~> 3.0.0"
 
-# gem 'ish_models',   github: 'wasya-co/ish_models',   branch: '3.1.0'
-
+gem 'wco_models',   github: 'wasya-co/wco_models',   branch: '3.1.0'
 gem 'iron_warbler', github: 'wasya-co/iron_warbler', branch: '2.0.7'
-# gem 'iron_warbler', git: "https://#{ENV['GITHUB_TOKEN']}:x-oauth-basic@github.com/wasya-co/iron_warbler.git", branch: '2.0.7'
 
 group :development, :test do
   gem 'byebug'
-  gem 'rspec-rails'
-
-  gem 'net-ssh', "~> 7.2.0"
-  
   gem 'irb', '>= 1.2.8'
-
+  gem 'net-ssh', "~> 7.2.0"
+  gem 'rspec-rails'
 end
 
 group :development do
-
+  gem 'capistrano'
   gem 'rack-mini-profiler', '~> 2.0'
   gem 'web-console',        '>= 4.1.0'
-
-  gem 'capistrano'
 end
 

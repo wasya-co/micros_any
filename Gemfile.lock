@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/wasya-co/iron_warbler.git
-  revision: 424528ee83fcc57d901f3672278dd0511334ddfc
+  revision: 75ad1dd650b62e25b3b23d01e9afc3b9faee9b91
   branch: 2.0.7
   specs:
-    iron_warbler (2.0.7.7)
+    iron_warbler (2.0.7.8)
       cancancan (~> 3.5.0)
       devise (~> 4.9.3)
       exception_notification (~> 4.5.0)
@@ -16,7 +16,13 @@ GIT
       omniauth-rails_csrf_protection (~> 1.0.1)
       rails (~> 6.1.0)
       wco_models (~> 3.1.0)
-    wco_models (3.1.0.43)
+
+GIT
+  remote: https://github.com/wasya-co/wco_models.git
+  revision: 9438631c6744d42c5529ea03017e62c18c50a6c6
+  branch: 3.1.0
+  specs:
+    wco_models (3.1.0.44)
       aws-sdk-s3
       business_time
       cancancan (~> 3.5.0)
@@ -468,6 +474,7 @@ DEPENDENCIES
   rails (~> 6.1.0)
   rspec-rails
   sass-rails (>= 6)
+  wco_models!
   web-console (>= 4.1.0)
 
 RUBY VERSION
