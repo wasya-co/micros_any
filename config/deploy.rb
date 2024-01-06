@@ -7,7 +7,6 @@ set :deploy_via,  :remote_cache
 set :deploy_to,   "/opt/projects/micros_email"
 
 append :linked_files, "log/production.log",
-  "config/database.yml",
   "config/master.key",
   "config/mongoid.yml",
   "config/initializers/00_s3.rb",

@@ -1,11 +1,18 @@
 
 == Install ==
 
-  # psych on ubuntu
+== Troubleshoot ==
+
+=== psych ===
+
   apt install -y \
     libyaml-dev
 
-== Troubleshoot ==
+  sudo gem update # or:
+  # gem install rubygems-update
+  # update_rubygems
+  # gem update --system
+
 
 === Selenium ===
 
