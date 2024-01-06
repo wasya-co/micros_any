@@ -1,0 +1,9 @@
+#!/bin/bash
+
+git add .
+git commit -m 'autocommit'
+git push
+
+be cap do3 deploy
+
+echo ok

@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/wasya-co/wco_email_rb.git
-  revision: 159b1e14120cf07e7d463797b407532e6fbacb92
+  revision: 08cc75cdbb8fca6da060b2279ecb244fde042a31
   branch: 0.0.0
   specs:
     wco_email (0.1.0.0)
