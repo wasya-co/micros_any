@@ -28,9 +28,11 @@ gem 'wco_email',  github: 'wasya-co/wco_email_rb', branch: '0.0.0'
 
 group :development, :test do
   gem 'byebug'
-  gem 'rspec-rails'
 
   gem 'capybara'
+
+  gem 'rspec-rails'
+
   gem 'selenium-webdriver', "~> 4.9.0"
 
   ## From: https://stackoverflow.com/questions/24004728/getting-selenium-webdriver-to-use-chrome-in-rspec-rails
@@ -40,10 +42,11 @@ group :development, :test do
 end
 
 group :development do
-  gem 'web-console', '>= 4.1.0'
+  gem 'capistrano'
+
   ## https://github.com/MiniProfiler/rack-mini-profiler/blob/master/README.md
   gem 'rack-mini-profiler', '~> 2.0'
 
-
+  gem 'web-console', '>= 4.1.0'
 end
 
