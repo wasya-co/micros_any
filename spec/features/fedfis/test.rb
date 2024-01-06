@@ -52,7 +52,8 @@ Capybara.default_max_wait_time = 100 # seconds
 RSpec.describe 'fedfis test 1' do
 
   before :all do
-    # @driver = Selenium::WebDriver.for(:remote_selenium_headless
+    options = Selenium::WebDriver::Options.chrome(args: ['--headless=new'])
+    @driver = Selenium::WebDriver.for :chrome, options: options
   end
 
   it 'sanity' do
