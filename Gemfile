@@ -26,15 +26,17 @@ gem 'wco_hosting', github: 'wasya-co/wco_hosting_rb', branch: '0.0.0'
 
 group :development, :test do
   gem 'byebug'
-  gem 'rspec-rails'
-
+  gem 'irb', '>= 1.2.8'
   gem 'net-ssh', "~> 7.2.0"
+  gem 'rspec-rails'
 end
 
 group :development do
-  gem 'web-console', '>= 4.1.0'
+  gem 'capistrano'
+
   ## https://github.com/MiniProfiler/rack-mini-profiler/blob/master/README.md
   gem 'rack-mini-profiler', '~> 2.0'
-  gem 'capistrano'
+
+  gem 'web-console', '>= 4.1.0'
 end
 

@@ -14,7 +14,7 @@ append :linked_files, "log/production.log",
   "config/initializers/05_stripe.rb",
   "config/initializers/08_integrations.rb",
   "config/initializers/action_mailer.rb",
-  ".bundle/config"
+  ".bundle/config" # github key
 
 namespace :deploy do
   task :bundle do
