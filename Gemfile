@@ -31,6 +31,9 @@ group :development, :test do
   gem 'rspec-rails'
 
   gem 'net-ssh', "~> 7.2.0"
+  
+  gem 'irb', '>= 1.2.8'
+
 end
 
 group :development do
