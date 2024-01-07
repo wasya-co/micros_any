@@ -2,8 +2,7 @@
 Rails.application.routes.draw do
   root to: 'application#home'
 
-
-  mount WcoHosting::Engine,      :at => '/hosting'
+  mount Wco::Engine,      :at => '/wco'
 
   devise_for :users, controllers: {
     omniauth_callbacks: 'users/omniauth_callbacks',

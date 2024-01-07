@@ -1,4 +1,7 @@
-require_relative "boot"
+ENV['BUNDLE_GEMFILE'] ||= File.expand_path('../Gemfile', __dir__)
+
+require "bundler/setup" # Set up gems listed in the Gemfile.
+
 
 ## From: https://github.com/rails/spring/issues/601
 # require "rails/all"
