@@ -9,7 +9,6 @@ Rails.application.routes.draw do
   root to: 'application#home'
 
 
-  mount WcoEmail::Engine => '/email/'
   mount Sidekiq::Web     => '/sidekiq'
   mount Wco::Engine      => '/wco'
 

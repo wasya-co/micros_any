@@ -1,10 +1,10 @@
 lock "~> 3.18.0"
 
-set :application, "micros_email"
-set :repo_url,    "git@github.com:wasya-co/micros_email.git"
-set :branch,      ENV['BRANCH'] || 'email-0.0.1'
+set :application, "micros_content"
+set :repo_url,    "git@github.com:wasya-co/micros_any.git"
+set :branch,      ENV['BRANCH'] || 'content-0.1.0'
 set :deploy_via,  :remote_cache
-set :deploy_to,   "/opt/projects/micros_email"
+set :deploy_to,   "/opt/projects/micros_content"
 
 append :linked_files, "log/production.log",
   ".bundle/config", # github key

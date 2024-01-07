@@ -11,7 +11,7 @@ Bundler.require(*Rails.groups)
 
 require 'wco_models'
 
-module MicrosEmail
+module MicrosContent
   class Application < Rails::Application
     config.load_defaults 6.1
 
