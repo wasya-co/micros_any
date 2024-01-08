@@ -21,6 +21,13 @@ namespace :deploy do
       execute "cd #{fetch(:deploy_to)}/current && /root/.rbenv/shims/bundle && RAILS_ENV=production /root/.rbenv/shims/bundle exec rake assets:precompile"
     end
   end
+
+  task :restart_services do
+    on roles(:web) do
+      execute "nginx -s reload"
+    end
+  end
 end
 
 after "deploy:published", "bundle"
+after "deploy:published", "restart_services"
