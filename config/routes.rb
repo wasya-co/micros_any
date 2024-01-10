@@ -1,9 +1,9 @@
 
 require 'sidekiq/web'
 
-Sidekiq::Web.use Rack::Auth::Basic do |username, password|
-  username == BASIC_AUTH_NAME && password == BASIC_AUTH_PASSWORD
-end
+# Sidekiq::Web.use Rack::Auth::Basic do |username, password|
+#   username == BASIC_AUTH_NAME && password == BASIC_AUTH_PASSWORD
+# end
 
 Rails.application.routes.draw do
   root to: 'application#home'
