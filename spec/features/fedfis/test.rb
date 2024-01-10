@@ -56,29 +56,38 @@ RSpec.describe 'fedfis test 1' do
     @driver = Selenium::WebDriver.for :chrome, options: options
   end
 
-  it 'sanity' do
-    visit 'http://localhost:3000'
-    byebug
-  end
+  # it 'sanity' do
+  #   visit 'http://localhost:3000'
+  #   byebug
+  # end
 
   it 'Fintech Digital Snapshot' do
 
-    # visit 'http://localhost:3000'
-    visit 'http://localhost2:3000'
+    visit 'http://fedfis-fe.local'
     fill_in('username', with: 'piousbox')
     fill_in('password', with: 'test1234')
     click_on('Sign In')
     click_on('Fintech Digital Snapshot')
 
+    n = 10
+    total_time = 0
+
     # all('h6').each_with_index do |h6, idx|
-    (1...11).each do |idx|
+    (1..n).each do |idx|
+      begin_time = Time.now
+
       fintech_name = find(:xpath, "(//h6)[#{idx}]").text
       find(:xpath, "(//h6)[#{idx}]").click
       n_installs = find(".MuiGrid-item:nth-child(1) .MuiCardContent-root h5:nth-child(2)").text
-      puts "+++ Fintech Name: #{fintech_name}\t\tn_installs: #{n_installs}"
+
       click_on('Go Back')
+
+      time_delta = Time.now - begin_time
+      total_time += time_delta
+      puts "+++ Fintech Name: #{fintech_name}\t\tn_installs: #{n_installs}\t\ttime_delta: #{time_delta}"
     end
 
+    puts "avg time: #{total_time/n}"
     # byebug
   end
 
