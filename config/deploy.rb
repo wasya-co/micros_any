@@ -11,7 +11,7 @@ append :linked_files, "log/production.log",
   "config/initializers/00_s3.rb",
   "config/initializers/05_stripe.rb",
   "config/initializers/08_integrations.rb",
-  "config/initializers/action_mailer.rb",
+  "config/initializers/09_action_mailer.rb",
   "config/master.key",
   "config/mongoid.yml"
 

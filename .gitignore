@@ -4,6 +4,7 @@
 
 chromedriver
 /config/initializers/0*
+/config/initializers/1*
 /config/master.key
 /config/mongoid.yml
 
