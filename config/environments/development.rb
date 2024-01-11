@@ -3,6 +3,7 @@ require "active_support/core_ext/integer/time"
 Rails.application.routes.default_url_options[:host] = "email.local:3004"
 Rails.application.configure do
   config.hosts << "email.local"
+  config.hosts << "aa00-143-244-34-214.ngrok-free.app"
 
   # Settings specified here will take precedence over those in config/application.rb.
 

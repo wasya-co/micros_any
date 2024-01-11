@@ -35,9 +35,9 @@ Rails.application.configure do
   # Use a different cache store in production.
   # config.cache_store = :mem_cache_store
 
-  # Use a real queuing backend for Active Job (and separate queues per environment).
-  # config.active_job.queue_adapter     = :resque
-  # config.active_job.queue_name_prefix = "micros_email_production"
+  config.active_job.queue_adapter = :sidekiq
+  config.active_job.queue_name_prefix = "wco_email_rb"
+  config.active_job.queue_name_delimiter = "_"
 
   config.action_mailer.perform_caching = false
 
