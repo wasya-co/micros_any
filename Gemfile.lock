@@ -470,6 +470,7 @@ DEPENDENCIES
   capistrano
   capybara
   devise (~> 4.9.3)
+  exception_notification
   irb (>= 1.2.8)
   jbuilder (~> 2.7)
   kaminari-actionview

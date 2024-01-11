@@ -93,3 +93,11 @@ Rails.application.configure do
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
 end
+
+Rails.application.config.middleware.use ExceptionNotification::Rack,
+  email: {
+    deliver_with: :deliver,
+    email_prefix: '[Email] ',
+    sender_address: %{micros_email <no-reply@wasya.co>},
+    exception_recipients: %w{poxlovi@gmail.com}
+  }
