@@ -73,3 +73,11 @@ Rails.application.configure do
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
 end
+
+Rails.application.config.middleware.use ExceptionNotification::Rack,
+  email: {
+    deliver_with: :deliver,
+    email_prefix: '[Email] ',
+    sender_address: %{micros_email <no-reply@wasya.co>},
+    exception_recipients: %w{poxlovi@gmail.com}
+  }
