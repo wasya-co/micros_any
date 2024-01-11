@@ -1,5 +1,7 @@
 require "active_support/core_ext/integer/time"
 
+Rails.application.routes.default_url_options[:host] = "wasyaco.com"
+
 Rails.application.configure do
   config.cache_classes = true
   config.eager_load    = true

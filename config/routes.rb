@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   mount Sidekiq::Web     => '/sidekiq'
   mount Wco::Engine      => '/wco'
 
+  post '/api/email/messages/from-ses', to: 'wco_email/messages#create_from_ses'
+
 
   devise_for :users, controllers: {
     omniauth_callbacks: 'users/omniauth_callbacks',

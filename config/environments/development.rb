@@ -1,5 +1,6 @@
 require "active_support/core_ext/integer/time"
 
+Rails.application.routes.default_url_options[:host] = "email.local:3004"
 Rails.application.configure do
   config.hosts << "email.local"
 
@@ -74,10 +75,10 @@ Rails.application.configure do
   # config.action_cable.disable_request_forgery_protection = true
 end
 
-Rails.application.config.middleware.use ExceptionNotification::Rack,
-  email: {
-    deliver_with: :deliver,
-    email_prefix: '[Email] ',
-    sender_address: %{micros_email <no-reply@wasya.co>},
-    exception_recipients: %w{poxlovi@gmail.com}
-  }
+# Rails.application.config.middleware.use ExceptionNotification::Rack,
+#   email: {
+#     deliver_with: :deliver,
+#     email_prefix: '[Email] ',
+#     sender_address: %{micros_email <no-reply@wasya.co>},
+#     exception_recipients: %w{poxlovi@gmail.com}
+#   }
