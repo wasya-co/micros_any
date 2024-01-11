@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   mount Sidekiq::Web     => '/sidekiq'
   mount Wco::Engine      => '/wco'
 
-  post '/api/email/messages/from-ses', to: 'wco_email/messages#create_from_ses'
+  post '/api/email/messages/from-ses', to: 'wco_email/api#create_email_message'
 
 
   devise_for :users, controllers: {
