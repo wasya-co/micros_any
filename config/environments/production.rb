@@ -3,7 +3,8 @@ require "active_support/core_ext/integer/time"
 Rails.application.routes.default_url_options[:host] = "wasyaco.com"
 
 ## From: https://github.com/rails/rails/pull/40766
-ActionMailer::Base.deliver_later_queue_name = "wco_email_rb_mailers"
+## 20240111 :: remove! this makes the queue wco_email_rb_wco_email_rb_mailers
+# ActionMailer::Base.deliver_later_queue_name = "wco_email_rb_mailers"
 
 Rails.application.configure do
   config.cache_classes = true
