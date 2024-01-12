@@ -45,7 +45,7 @@ Rails.application.configure do
   config.active_job.queue_name_delimiter = "_"
 
   config.action_mailer.perform_caching = true
-  config.action_mailer.deliver_later_queue_name = "wco_email_rb_mailers"
+  config.action_mailer.deliver_later_queue_name = "mailers"
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
