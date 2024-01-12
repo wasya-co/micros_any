@@ -2,6 +2,8 @@
 
 set -ex
 
+echo $(date) > timestamp
+
 bundle
 
 git add .
