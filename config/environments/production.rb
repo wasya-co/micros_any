@@ -2,6 +2,9 @@ require "active_support/core_ext/integer/time"
 
 Rails.application.routes.default_url_options[:host] = "wasyaco.com"
 
+## From: https://github.com/rails/rails/pull/40766
+ActionMailer::Base.deliver_later_queue_name = "wco_email_rb_mailers"
+
 Rails.application.configure do
   config.cache_classes = true
   config.eager_load    = true
@@ -35,11 +38,13 @@ Rails.application.configure do
   # Use a different cache store in production.
   # config.cache_store = :mem_cache_store
 
+  ## From: https://github.com/sidekiq/sidekiq/wiki/Active-Job#queues
   config.active_job.queue_adapter = :sidekiq
   config.active_job.queue_name_prefix = "wco_email_rb"
   config.active_job.queue_name_delimiter = "_"
 
-  config.action_mailer.perform_caching = false
+  config.action_mailer.perform_caching = true
+  config.action_mailer.deliver_later_queue_name = "wco_email_rb_mailers"
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.

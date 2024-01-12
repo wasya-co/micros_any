@@ -9,12 +9,13 @@ Rails.application.routes.draw do
   root to: 'application#home'
 
 
-  mount WcoEmail::Engine => '/email/'
-  mount Sidekiq::Web     => '/sidekiq'
-  mount Wco::Engine      => '/wco'
+  mount WcoEmail::Engine   => '/email'
+  mount WcoHosting::Engine => '/hosting'
+  mount Iro::Engine        => '/trading'
+  mount Sidekiq::Web       => '/sidekiq'
+  mount Wco::Engine        => '/wco'
 
   post '/api/email/messages/from-ses', to: 'wco_email/api#create_email_message'
-
 
   devise_for :users, controllers: {
     omniauth_callbacks: 'users/omniauth_callbacks',
