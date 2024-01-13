@@ -22,3 +22,5 @@ module MicrosEmail
 
   end
 end
+
+DEBUG = true
