@@ -61,10 +61,10 @@ Rails.application.configure do
   # require "syslog/logger"
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
 
-  config.log_formatter = ::Logger::Formatter.new
-  logger               = ActiveSupport::Logger.new("log/production.log")
-  logger.formatter     = config.log_formatter
-  config.logger        = ActiveSupport::TaggedLogging.new(logger)
+  # config.log_formatter = ::Logger::Formatter.new
+  # logger               = ActiveSupport::Logger.new("log/production.log")
+  # logger.formatter     = config.log_formatter
+  # config.logger        = ActiveSupport::TaggedLogging.new(logger)
 end
 
 Rails.application.config.middleware.use ExceptionNotification::Rack,
@@ -74,3 +74,6 @@ Rails.application.config.middleware.use ExceptionNotification::Rack,
     sender_address: %{micros_email <no-reply@wasya.co>},
     exception_recipients: %w{poxlovi@gmail.com}
   }
+
+$stdout = File.new('log/console.log', 'w')
+$stdout.sync = true
