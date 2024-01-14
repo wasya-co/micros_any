@@ -75,5 +75,7 @@ Rails.application.config.middleware.use ExceptionNotification::Rack,
     exception_recipients: %w{poxlovi@gmail.com}
   }
 
-$stdout = File.new("log/#{ENV['APP_NAME']}-#{Rails.env}.log", 'w')
-$stdout.sync = true
+if ENV['APP_NAME']
+  $stdout = File.new("log/#{ENV['APP_NAME']}-#{Rails.env}.log", 'w')
+  $stdout.sync = true
+end

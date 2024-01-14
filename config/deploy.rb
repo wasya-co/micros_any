@@ -6,13 +6,16 @@ set :branch,      ENV['BRANCH'] || 'email-0.0.1'
 set :deploy_via,  :remote_cache
 set :deploy_to,   "/opt/projects/micros_email"
 
-append :linked_files, "log/production.log",
-  ".bundle/config", # github key
+append :linked_files, ".bundle/config", # github key
   "config/initializers/00_s3.rb",
   "config/initializers/05_stripe.rb",
   "config/initializers/08_integrations.rb",
   "config/initializers/09_action_mailer.rb",
-  # "config/master.key",
+
+  "log/rea-production.log",
+  "log/sendctxs-production.log",
+  "log/production.log",
+
   "config/mongoid.yml"
 
 namespace :deploy do
