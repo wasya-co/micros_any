@@ -47,7 +47,7 @@ group :development do
   gem 'capistrano'
 
   ## https://github.com/MiniProfiler/rack-mini-profiler/blob/master/README.md
-  gem 'rack-mini-profiler', '~> 2.0'
+  # gem 'rack-mini-profiler', '~> 2.0'
 
   gem 'web-console', '>= 4.1.0'
 end
