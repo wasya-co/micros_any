@@ -1,5 +1,11 @@
 #!/bin/bash
 
+set -ex
+
+echo $(date) > timestamp
+
+bundle
+
 git add .
 git commit -m 'autocommit'
 git push

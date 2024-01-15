@@ -22,6 +22,13 @@ namespace :deploy do
       execute "nginx -s reload"
     end
   end
+
+  task :create_indexes do
+    on roles(:web) do
+      execute "cd #{fetch(:deploy_to)}/current && RAILS_ENV=production /root/.rbenv/shims/bundle exec rake db:mongoid:create_indexes "
+    end
+  end
 end
 
 after "deploy:published", "bundle"
+after "deploy:published", "create_indexes"
