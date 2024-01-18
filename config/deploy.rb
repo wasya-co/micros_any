@@ -12,6 +12,7 @@ append :linked_files, ".bundle/config", # github key
   "config/initializers/08_integrations.rb",
   "config/initializers/09_action_mailer.rb",
 
+  "log/nginx-production.log",
   "log/production.log",
   "log/rea-production.log",
   "log/roa-production.log",
