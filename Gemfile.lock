@@ -20,10 +20,10 @@ GIT
 
 GIT
   remote: https://github.com/wasya-co/wco_email_rb.git
-  revision: 29b612c5f8cea31dbb718f62889c8ad412640696
+  revision: 2825c087f5972f3e6a75d6cd4f3a8412db16c084
   branch: 0.0.0
   specs:
-    wco_email (0.1.1.44)
+    wco_email (0.1.1.45)
       aws-sdk-s3
       business_time
       cancancan (~> 3.5.0)
@@ -31,6 +31,7 @@ GIT
       exception_notification (~> 4.5.0)
       haml (~> 6.3.0)
       httparty
+      jbuilder (~> 2.11.5)
       kaminari-actionview
       kaminari-mongoid (~> 1.0.1)
       mail (~> 2.8.1)
@@ -68,10 +69,10 @@ GIT
 
 GIT
   remote: https://github.com/wasya-co/wco_models.git
-  revision: 6c9539d2efea2ead779e4d87ca3c810d7d7a413c
+  revision: 252baac7e9b5a4c0ff2b9c42cc35411d4535bca0
   branch: 3.1.0
   specs:
-    wco_models (3.1.0.94)
+    wco_models (3.1.0.96)
       aws-sdk-s3
       business_time
       cancancan (~> 3.5.0)
@@ -80,6 +81,7 @@ GIT
       droplet_kit (~> 3.20.0)
       haml (~> 6.3.0)
       httparty
+      jbuilder (~> 2.11.5)
       kaminari-actionview
       kaminari-mongoid (~> 1.0.1)
       mongoid (~> 7.3.0)
@@ -164,17 +166,17 @@ GEM
     airbrussh (1.5.0)
       sshkit (>= 1.6.1, != 1.7.0)
     aws-eventstream (1.3.0)
-    aws-partitions (1.882.0)
-    aws-sdk-core (3.190.3)
+    aws-partitions (1.884.0)
+    aws-sdk-core (3.191.0)
       aws-eventstream (~> 1, >= 1.3.0)
       aws-partitions (~> 1, >= 1.651.0)
       aws-sigv4 (~> 1.8)
       jmespath (~> 1, >= 1.6.1)
-    aws-sdk-kms (1.76.0)
-      aws-sdk-core (~> 3, >= 3.188.0)
+    aws-sdk-kms (1.77.0)
+      aws-sdk-core (~> 3, >= 3.191.0)
       aws-sigv4 (~> 1.1)
-    aws-sdk-s3 (1.142.0)
-      aws-sdk-core (~> 3, >= 3.189.0)
+    aws-sdk-s3 (1.143.0)
+      aws-sdk-core (~> 3, >= 3.191.0)
       aws-sdk-kms (~> 1)
       aws-sigv4 (~> 1.8)
     aws-sigv4 (1.8.0)
