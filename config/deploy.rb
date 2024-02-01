@@ -33,6 +33,12 @@ namespace :deploy do
     end
   end
 
+  task :fix_cache do
+    on roles(:web) do
+      execute "cd #{fetch(:deploy_to)}/current && chmod a+w tmp/cache"
+    end
+  end
+
   task :restart_services do
     on roles(:web) do
       execute "nginx -s reload"
@@ -47,4 +53,5 @@ end
 
 after "deploy:published", "bundle"
 after "deploy:published", "create_indexes"
+after "deploy:published", "fix_cache"
 after "deploy:published", "restart_services"
