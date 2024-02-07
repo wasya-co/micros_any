@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/wasya-co/iron_warbler.git
-  revision: 340d23b0b2e8fb55624e737fb8d21e54306dbf10
+  revision: 7e1422452b96a15525651864b0692868a6dbb0f9
   branch: 2.0.7
   specs:
-    iron_warbler (2.0.7.14)
+    iron_warbler (2.0.7.15)
       business_time
       cancancan (~> 3.5.0)
       devise (~> 4.9.3)
