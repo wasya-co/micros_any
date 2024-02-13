@@ -1,6 +1,9 @@
 
 .application-home.flexwidth
 
-  %h5 Hello. Main app: #{link_to 'email', '/email' }
+  - if current_user
+    %h5 Hello. Main app: #{link_to 'email', '/email' }
+  - else
+    Not logged in.
 
   User: #{current_user.inspect}
