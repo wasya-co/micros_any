@@ -1,9 +1,18 @@
 
 == Install ==
 
-  # psych on ubuntu
+== Troubleshoot ==
+
+=== psych ===
+
   apt install -y \
     libyaml-dev
+  apt upgrade libyaml-dev
+
+  sudo gem update # or:
+  # gem install rubygems-update
+  # update_rubygems
+  # gem update --system
 
   brew install libyaml
 
