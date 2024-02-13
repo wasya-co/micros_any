@@ -5,6 +5,8 @@
   apt install -y \
     libyaml-dev
 
+  brew install libyaml
+
 == Troubleshoot ==
 
 === Selenium ===
