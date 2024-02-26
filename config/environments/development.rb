@@ -3,7 +3,7 @@ require "active_support/core_ext/integer/time"
 Rails.application.routes.default_url_options[:host] = "email.local:3004"
 Rails.application.configure do
   config.hosts << "email.local"
-  config.hosts << "aa00-143-244-34-214.ngrok-free.app"
+  # config.hosts << "aa00-143-244-34-214.ngrok-free.app"
 
   config.cache_classes = false
   config.eager_load    = false
@@ -38,5 +38,5 @@ end
 #     deliver_with: :deliver,
 #     email_prefix: '[Email] ',
 #     sender_address: %{micros_email <no-reply@wasya.co>},
-#     exception_recipients: %w{poxlovi@gmail.com}
+#     exception_recipients: %w{poxlovi+zebradoc1@gmail.com}
 #   }

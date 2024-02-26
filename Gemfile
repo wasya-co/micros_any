@@ -30,25 +30,18 @@ gem 'iron_warbler', github: 'wasya-co/iron_warbler',   branch: '2.0.7'
 
 group :development, :test do
   gem 'byebug'
-
   gem 'capybara'
-
+  gem 'irb', '>= 1.2.8'
   gem 'rspec-rails'
-
   gem 'selenium-webdriver', "~> 4.9.0"
 
   ## From: https://stackoverflow.com/questions/24004728/getting-selenium-webdriver-to-use-chrome-in-rspec-rails
   # gem 'chromedriver-helper'
-
-  gem 'irb', '>= 1.2.8'
 end
 
 group :development do
   gem 'capistrano'
-
-  ## https://github.com/MiniProfiler/rack-mini-profiler/blob/master/README.md
-  # gem 'rack-mini-profiler', '~> 2.0'
-
+  gem 'rack-mini-profiler', '~> 2.0'
   gem 'web-console', '>= 4.1.0'
 end
 
