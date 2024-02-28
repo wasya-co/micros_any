@@ -22,6 +22,7 @@ gem 'nokogiri', '~> 1.15.5'
 gem "omniauth-keycloak",              "~> 1.5.1"
 gem "omniauth-rails_csrf_protection", "~> 1.0.1" # required by wco_email, by keycloak to be in the host app.
 gem 'sidekiq'
+gem 'rack-cors'
 
 gem 'wco_models',   github: 'wasya-co/wco_models',     branch: '3.1.0'
 gem 'wco_email',    github: 'wasya-co/wco_email_rb',   branch: '0.0.0'
