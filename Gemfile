@@ -5,6 +5,7 @@ ruby '2.7.5'
 
 gem 'bcrypt', '~> 3.1.7'
 gem 'devise',                         "~> 4.9.3"
+gem 'exception_notification'
 gem 'jbuilder', '~> 2.7'
 gem 'kaminari-mongoid',  '~> 1.0.1'
 gem 'kaminari-actionview'
