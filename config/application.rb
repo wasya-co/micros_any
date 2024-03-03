@@ -31,4 +31,9 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
   end
 end
 
+def puts! a, b=''
+  puts "+++ +++ #{b}:"
+  puts a.inspect
+end
+
 DEBUG = true
