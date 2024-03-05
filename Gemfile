@@ -4,6 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.7.5'
 
 gem 'bcrypt', '~> 3.1.7'
+gem 'colorize'
 gem 'devise',                         "~> 4.9.3"
 gem 'exception_notification'
 gem 'jbuilder', '~> 2.7'

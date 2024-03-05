@@ -69,10 +69,10 @@ GIT
 
 GIT
   remote: https://github.com/wasya-co/wco_models.git
-  revision: cf6d336976294158d9543291a2e422ca0462d515
+  revision: c64ed2aaa24dfd1dfa50d9eedf81ca5763d005f0
   branch: 3.1.0
   specs:
-    wco_models (3.1.0.124)
+    wco_models (3.1.0.126)
       aws-sdk-s3
       business_time
       cancancan (~> 3.5.0)
@@ -213,6 +213,7 @@ GEM
     climate_control (0.2.0)
     coercible (1.0.0)
       descendants_tracker (~> 0.0.1)
+    colorize (1.1.0)
     concurrent-ruby (1.2.2)
     connection_pool (2.4.1)
     crass (1.0.6)
@@ -523,6 +524,7 @@ DEPENDENCIES
   byebug
   capistrano
   capybara
+  colorize
   devise (~> 4.9.3)
   exception_notification
   irb (>= 1.2.8)
