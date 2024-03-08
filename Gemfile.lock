@@ -20,10 +20,10 @@ GIT
 
 GIT
   remote: https://github.com/wasya-co/wco_email_rb.git
-  revision: cbc302d0e98e800097aa37f1cc43f26b8afb9d73
+  revision: 05e7fe81c6a5dacf4bb3f6b36d3c293474019cae
   branch: 0.0.0
   specs:
-    wco_email (0.1.1.62)
+    wco_email (0.1.1.63)
       aws-sdk-s3
       business_time
       cancancan (~> 3.5.0)
@@ -69,10 +69,10 @@ GIT
 
 GIT
   remote: https://github.com/wasya-co/wco_models.git
-  revision: b23b4cde732227d6f240d70f3760083b560817bf
+  revision: 4b0be4f33ca287646c088705d7f53b01b8bf154a
   branch: 3.1.0
   specs:
-    wco_models (3.1.0.127)
+    wco_models (3.1.0.129)
       aws-sdk-s3
       business_time
       cancancan (~> 3.5.0)
@@ -187,6 +187,7 @@ GEM
       thread_safe (~> 0.3, >= 0.3.1)
     base64 (0.2.0)
     bcrypt (3.1.20)
+    bigdecimal (3.1.6)
     bindata (2.4.15)
     bindex (0.8.1)
     bson (4.15.0)
@@ -361,10 +362,11 @@ GEM
       actionpack (>= 4.2)
       omniauth (~> 2.0)
     orm_adapter (0.5.0)
-    pdf-core (0.9.0)
-    prawn (2.4.0)
-      pdf-core (~> 0.9.0)
-      ttfunk (~> 1.7)
+    pdf-core (0.10.0)
+    prawn (2.5.0)
+      matrix (~> 0.4)
+      pdf-core (~> 0.10.0)
+      ttfunk (~> 1.8)
     prawn-table (0.2.2)
       prawn (>= 1.3.0, < 3.0.0)
     psych (5.0.2)
@@ -492,7 +494,8 @@ GEM
     thread_safe (0.3.6)
     tilt (2.3.0)
     timeout (0.4.1)
-    ttfunk (1.7.0)
+    ttfunk (1.8.0)
+      bigdecimal (~> 3.1)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     version_gem (1.1.3)
