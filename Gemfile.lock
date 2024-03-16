@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/wasya-co/iron_warbler.git
-  revision: 690e1e94c125f5cd03043265b5f37ce312eb3fce
-  branch: 2.0.7
+  revision: 6becf03211345dcb03792b4ff50b3ab1407b9b63
+  branch: 2.2.0
   specs:
-    iron_warbler (2.0.7.19)
+    iron_warbler (2.0.7.21)
       business_time
       cancancan (~> 3.5.0)
       devise (~> 4.9.3)
@@ -69,10 +69,10 @@ GIT
 
 GIT
   remote: https://github.com/wasya-co/wco_models.git
-  revision: 0dc9e6703093ba7105cf5bf634d5dfd2dbfbade7
+  revision: b7c053b09992968d7240f7a92b4952a29d16bb2f
   branch: 3.1.0
   specs:
-    wco_models (3.1.0.133)
+    wco_models (3.1.0.135)
       aws-sdk-s3
       business_time
       cancancan (~> 3.5.0)

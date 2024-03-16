@@ -28,7 +28,7 @@ gem 'rack-cors'
 gem 'wco_models',   github: 'wasya-co/wco_models',     branch: '3.1.0'
 gem 'wco_email',    github: 'wasya-co/wco_email_rb',   branch: '0.0.0'
 gem 'wco_hosting',  github: 'wasya-co/wco_hosting_rb', branch: '0.0.0'
-gem 'iron_warbler', github: 'wasya-co/iron_warbler',   branch: '2.0.7'
+gem 'iron_warbler', github: 'wasya-co/iron_warbler',   branch: '2.2.0'
 
 group :development, :test do
   gem 'byebug'
