@@ -15,6 +15,7 @@ module MicrosEmail
     config.load_defaults 6.1
 
     config.generators.system_tests = nil
+    config.encoding = "utf-8"
 
     config.generators do |g|
       g.orm :mongoid
