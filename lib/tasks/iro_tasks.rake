@@ -6,16 +6,14 @@ namespace :iro do
   #    Time.now.in_time_zone < Time.now.in_time_zone.beginning_of_day + 15.hours
   # end
   #
-  desc 'alert on stock price action'
-  task alert_stocks: :environment do
-    while true
-
-      ::Iro::Iro.alert_stocks
-
-      print '.'
-      sleep 45 # seconds
-    end
-  end
+  # desc 'alert on stock price action'
+  # task alert_stocks: :environment do
+  #   while true
+  #     ::Iro::Iro.alert_stocks
+  #     print '.'
+  #     sleep 45 # seconds
+  #   end
+  # end
 
   ## 2023-03-31 _vp_ Done, unused.
   desc 'alert stocks test'

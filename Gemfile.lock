@@ -1,12 +1,13 @@
 GIT
   remote: https://github.com/wasya-co/iron_warbler.git
-  revision: d5eba3a7cf35b917bf4c9b97771b731ca1c378cb
+  revision: 111187f36a5102dc8bf7da2970dbd02ebebc86a4
   branch: 2.2.0
   specs:
-    iron_warbler (2.0.7.22)
+    iron_warbler (2.0.7.25)
       business_time
       cancancan (~> 3.5.0)
       devise (~> 4.9.3)
+      distribution
       exception_notification (~> 4.5.0)
       haml (~> 6.3.0)
       httparty (~> 0.21.0)
@@ -69,10 +70,10 @@ GIT
 
 GIT
   remote: https://github.com/wasya-co/wco_models.git
-  revision: cf520232184075d34e07fb151c9c7e9cf7d8e526
+  revision: 02c211f68802a85c96f09fc6227f13a6e69a81eb
   branch: 3.1.0
   specs:
-    wco_models (3.1.0.145)
+    wco_models (3.1.0.146)
       aws-sdk-s3
       business_time
       cancancan (~> 3.5.0)
@@ -228,6 +229,7 @@ GEM
       responders
       warden (~> 1.2.3)
     diff-lcs (1.5.0)
+    distribution (0.8.0)
     droplet_kit (3.20.0)
       faraday (>= 0.15)
       faraday-retry (~> 2.2.0)
