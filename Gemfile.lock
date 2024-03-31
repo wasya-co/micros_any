@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/wasya-co/iron_warbler.git
-  revision: 111187f36a5102dc8bf7da2970dbd02ebebc86a4
+  revision: 7d96e3235e7f4e5aee19afbb370e0d1aa9a3ebbe
   branch: 2.2.0
   specs:
-    iron_warbler (2.0.7.25)
+    iron_warbler (2.0.7.26)
       business_time
       cancancan (~> 3.5.0)
       devise (~> 4.9.3)
@@ -21,10 +21,10 @@ GIT
 
 GIT
   remote: https://github.com/wasya-co/wco_email_rb.git
-  revision: f42335f4079c08345184335f318e3caed9b8c58b
+  revision: 667a98f3a08734de8d36a1e9ca4128ceee8cbb96
   branch: 0.0.0
   specs:
-    wco_email (0.1.1.67)
+    wco_email (0.1.1.68)
       aws-sdk-s3
       business_time
       cancancan (~> 3.5.0)
@@ -48,10 +48,10 @@ GIT
 
 GIT
   remote: https://github.com/wasya-co/wco_hosting_rb.git
-  revision: 9787cb67f20182b7668cc08a25647b9261e3f087
+  revision: e463ad3cb258fd16be9d1c289d9bf8373a98b28e
   branch: 0.0.0
   specs:
-    wco_hosting (0.0.0.19)
+    wco_hosting (0.0.0.20)
       cancancan (~> 3.5.0)
       devise (~> 4.9.3)
       haml (~> 6.3.0)
@@ -70,10 +70,10 @@ GIT
 
 GIT
   remote: https://github.com/wasya-co/wco_models.git
-  revision: ca9cb47f34e741cc873c76bfae6435c355eec74a
+  revision: 01b1f20de6f33511cd78f8ba6a2813b9ea39c432
   branch: 3.1.0
   specs:
-    wco_models (3.1.0.147)
+    wco_models (3.1.0.150)
       aws-sdk-s3
       business_time
       cancancan (~> 3.5.0)
@@ -167,16 +167,16 @@ GEM
     airbrussh (1.5.0)
       sshkit (>= 1.6.1, != 1.7.0)
     aws-eventstream (1.3.0)
-    aws-partitions (1.898.0)
-    aws-sdk-core (3.191.4)
+    aws-partitions (1.904.0)
+    aws-sdk-core (3.191.5)
       aws-eventstream (~> 1, >= 1.3.0)
       aws-partitions (~> 1, >= 1.651.0)
       aws-sigv4 (~> 1.8)
       jmespath (~> 1, >= 1.6.1)
-    aws-sdk-kms (1.77.0)
+    aws-sdk-kms (1.78.0)
       aws-sdk-core (~> 3, >= 3.191.0)
       aws-sigv4 (~> 1.1)
-    aws-sdk-s3 (1.145.0)
+    aws-sdk-s3 (1.146.1)
       aws-sdk-core (~> 3, >= 3.191.0)
       aws-sdk-kms (~> 1)
       aws-sigv4 (~> 1.8)
