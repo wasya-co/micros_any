@@ -20,6 +20,8 @@ class Pi::Sitemap
       { path: '/2022/03/ruby-on-rails-allow-parameters-to-have-dot/', redirect_to: 'https://wasyaco.com/2022/03/ruby-on-rails-allow-parameters-to-have-dot' },
       { path: '/2022/12/japan-securities-clearing-corp-jscc-issues-emergency-margin-call/',       selector: 'article.post-7033' },
       { path: '/2022/08/convert-wireframe-edges-to-a-model-in-maya/', selector: 'article.post-5854' },
+      { path: '/2023/08/capturan-a-otro-extranjero-por-delitos-sexuales-contra-menores-de-edad-cometidos-en-medellin/',
+        redirect_to: 'https://infiniteshelter.com/2023/08/capturan-a-otro-extranjero-por-delitos-sexuales-contra-menores-de-edad-cometidos-en-medellin/' },
       { path: '/2023/10/does-using-cannabis-lower-blood-pressure', selector: 'article[data-history-node-id="68"]' },
       ##
       ## I
