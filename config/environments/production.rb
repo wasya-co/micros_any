@@ -79,3 +79,6 @@ if ENV['APP_NAME']
   $stdout = File.new("log/#{ENV['APP_NAME']}-#{Rails.env}.log", 'w')
   $stdout.sync = true
 end
+
+DEBUG = false
+

@@ -41,3 +41,6 @@ end
 #     sender_address: %{micros_email <no-reply@wasya.co>},
 #     exception_recipients: %w{poxlovi+zebradoc1@gmail.com}
 #   }
+
+DEBUG = true
+
