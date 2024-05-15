@@ -46,8 +46,28 @@ namespace :sitemap do
 
   end
 
-  desc 'be rake sitemap:text namespace=Demmitv|Ish|Pi|Wco [ origin="http://wco_local:8088" ] '
-  task :test => :environment do
+  task resave: :environment do
+    Wco::SitemapPath.unscoped.map &:destroy!
+    site = Wco::Site.find '661fe7f1767ccd74d5a0f534'
+    "Wco::Sitemap".constantize.new.checks.each do |check|
+      spath = Wco::SitemapPath.new({
+        site_id: site.id,
+        path: check[:path],
+        redirect_to: check[:redirect_to],
+        selector: check[:selector],
+        selectors: check[:selectors],
+      })
+      if spath.save
+        print '^'
+      else
+        puts spath.errors.full_messages
+      end
+    end
+    puts 'ok'
+  end
+
+  desc 'be rake sitemap:check namespace=Demmitv|Ish|Pi|Wco [ origin="http://wco_local:8088" ] '
+  task :check => :environment do
 
     if !ENV['namespace']
       puts "Usage: "
