@@ -42,7 +42,7 @@ namespace :deploy do
   task :restart_services do
     on roles(:web) do
       execute "nginx -s reload"
-      execute "service iro_alerts restart"
+      # execute "service iro_alerts restart"
       execute "service wco_email_sidekiq restart"
       execute "service wco_email_send_contexts restart"
       execute "service wco_email_run_email_actions restart"
