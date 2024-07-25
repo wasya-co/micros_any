@@ -32,8 +32,19 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
   end
 end
 
+def json_puts! a, b=''
+  puts "+++ #{b}:"
+  print JSON.pretty_generate( a )
+  STDOUT.flush
+end
+
 def puts! a, b=''
   puts "+++ +++ #{b}:"
   puts a.inspect
 end
 
+def print! a, b=''
+  puts "+++ #{b}:"
+  print a
+  STDOUT.flush
+end
