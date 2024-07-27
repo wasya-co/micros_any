@@ -8,6 +8,10 @@ class ApplicationController < ActionController::Base
     # flash[:notice] = 'okk'
   end
 
+  def tmp_1
+    render 'tmp/one', layout: 'bootstrap'
+  end
+
   ##
   ## private
   ##

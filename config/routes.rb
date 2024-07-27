@@ -8,6 +8,9 @@ require 'sidekiq/web'
 Rails.application.routes.draw do
   root to: 'application#home'
 
+  get '/tmp/1',   to: 'application#tmp_1'
+  get '/tmp/one', to: 'application#tmp_1'
+
 
   mount WcoEmail::Engine   => '/email'
   mount WcoHosting::Engine => '/hosting'
