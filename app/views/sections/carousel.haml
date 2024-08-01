@@ -1,0 +1,32 @@
+
+-#
+-# https://getbootstrap.com/docs/4.0/components/carousel/
+-#   $('.carousel').carousel()
+-#
+
+-# :javascript
+-#   alert('abba')
+
+<br /><br /><br />
+
+#carouselExampleIndicators.a20240801-carousel.carousel.slide{"data-ride" => "carousel", 'data-interval' => 20000 }
+  %ol.carousel-indicators
+    %li.active{"data-slide-to" => "0", "data-target" => "#carouselExampleIndicators"}
+    %li{"data-slide-to" => "1", "data-target" => "#carouselExampleIndicators"}
+    %li{"data-slide-to" => "2", "data-target" => "#carouselExampleIndicators"}
+  .carousel-inner
+    .carousel-item.active
+      .itemC
+        %img.d-block{alt: "First slide", src: "https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2024/07/27154134/1024x921-marble-envelope.jpg"}/
+    .carousel-item
+      .itemC
+        %img.d-block{alt: "Second slide", src: "https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2024/07/19193910/wco-banner-1.jpg"}/
+    .carousel-item
+      .itemC
+        %img.d-block{alt: "Third slide", src: "https://d15g8hc4183yn4.cloudfront.net/wp-content/uploads/2024/06/25164107/fedfis-lake2.jpg"}/
+  %a.carousel-control-prev{"data-slide" => "prev", href: "#carouselExampleIndicators", role: "button"}
+    %span.carousel-control-prev-icon{"aria-hidden" => "true"}
+    %span.sr-only Previous
+  %a.carousel-control-next{"data-slide" => "next", href: "#carouselExampleIndicators", role: "button"}
+    %span.carousel-control-next-icon{"aria-hidden" => "true"}
+    %span.sr-only Next

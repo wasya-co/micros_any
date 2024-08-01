@@ -131,3 +131,30 @@
     }
   }
 }
+
+.a20240801-carousel {
+  background: #999;
+  height: 500px;
+
+  img {
+    width: 300px;
+  }
+
+  .carousel-inner {
+    height: 100%;
+
+    .carousel-item {
+      height: 100%;
+
+      .itemC {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+      }
+
+
+
+    }
+  }
+}

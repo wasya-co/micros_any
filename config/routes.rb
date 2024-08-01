@@ -8,8 +8,8 @@ require 'sidekiq/web'
 Rails.application.routes.draw do
   root to: 'application#home'
 
-  get '/tmp/1',   to: 'application#tmp_1'
-  get '/tmp/one', to: 'application#tmp_1'
+  get '/sections/carousel',   to: 'application#sections_carousel'
+  get '/sections/one', to: 'application#sections_one'
 
 
   mount WcoEmail::Engine   => '/email'

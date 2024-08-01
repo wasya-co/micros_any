@@ -8,8 +8,12 @@ class ApplicationController < ActionController::Base
     # flash[:notice] = 'okk'
   end
 
-  def tmp_1
-    render 'tmp/one', layout: 'bootstrap'
+  def sections_one
+    render 'sections/one', layout: 'bootstrap'
+  end
+
+  def sections_carousel
+    render 'sections/carousel', layout: 'bootstrap'
   end
 
   ##
