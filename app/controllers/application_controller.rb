@@ -8,6 +8,10 @@ class ApplicationController < ActionController::Base
     # flash[:notice] = 'okk'
   end
 
+  def section
+    render "sections/#{params[:which]}", layout: 'bootstrap'
+  end
+
   def sections_one
     render 'sections/one', layout: 'bootstrap'
   end
