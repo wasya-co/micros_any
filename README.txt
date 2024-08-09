@@ -40,8 +40,3 @@ From: https://www.selenium.dev/blog/2023/headless-is-going-away/
 * 2023-12-15
 * https://github.com/ccrockett/omniauth-keycloak?tab=readme-ov-file
 ** https://github.com/omniauth/omniauth
-
-= schwab =
-== swagger ==
-
-* https://developer.schwab.com/products/trader-api--individual
