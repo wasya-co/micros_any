@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/wasya-co/iron_warbler.git
-  revision: e1555fb7f0f91bdf376f43b16de31c23c2df2eae
+  revision: b858669068e5af5795615bc3d2241ec92574f20f
   branch: 2.2.1
   specs:
     iron_warbler (2.0.7.39)
@@ -70,7 +70,7 @@ GIT
 
 GIT
   remote: https://github.com/wasya-co/wco_models.git
-  revision: 6022b441fe178da3c57f20e8af03cdf4f38f51f2
+  revision: e4ce7fcdbd5f188935218bba1d07622f7c0df95f
   branch: 3.1.0
   specs:
     wco_models (3.1.0.168)
