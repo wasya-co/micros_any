@@ -3,6 +3,7 @@
  *
  *= require wco/Card
  *= require ./a20240822-our-services
+ *= require ./a20240801-carousel
  *
 **/
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
@@ -129,33 +130,6 @@
 
     i {
       font-size: 64px;
-    }
-  }
-}
-
-.a20240801-carousel {
-  background: #999;
-  height: 500px;
-
-  img {
-    width: 300px;
-  }
-
-  .carousel-inner {
-    height: 100%;
-
-    .carousel-item {
-      height: 100%;
-
-      .itemC {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-      }
-
-
-
     }
   }
 }
