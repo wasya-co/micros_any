@@ -18,7 +18,7 @@ gem 'kaminari-mongoid',  '~> 1.0.1'
 gem 'devise',                         "~> 4.9.3"
 gem "omniauth-keycloak",              "~> 1.5.1"
 gem "omniauth-rails_csrf_protection", "~> 1.0.1" # required by wco_email, by keycloak to be in the host app.
-# gem 'keycloak',                       "~> 3.0.0"
+gem 'keycloak',                       "~> 3.0.0"
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
