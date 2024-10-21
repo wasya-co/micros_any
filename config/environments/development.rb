@@ -1,9 +1,7 @@
 require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
-  config.hosts << "hosting.local"
-
-  # Settings specified here will take precedence over those in config/application.rb.
+  config.hosts << "trading.local"
 
   # In the development environment your application's code is reloaded any time
   # it changes. This slows down response time but is perfect for development
@@ -33,7 +31,7 @@ Rails.application.configure do
   end
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
 
   config.action_mailer.perform_caching = false
 
@@ -73,3 +71,10 @@ Rails.application.configure do
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
 end
+Rails.application.config.middleware.use ExceptionNotification::Rack,
+  email: {
+    deliver_with: :deliver,
+    email_prefix: '[Iro] ',
+    sender_address: %{"m3 exceptionist" <no-reply@wasya.co>},
+    exception_recipients: %w{poxlovi@gmail.com}
+  }

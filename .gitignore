@@ -2,9 +2,11 @@
 .bundle
 .byebug_history
 
-/config/mongoid.yml
 /config/initializers/0*
+/config/initializers/action_mailer.rb
+/config/mongoid.yml
 /config/master.key
+/config/mongoid.yml
 
 /db/*.sqlite3
 /db/*.sqlite3-*

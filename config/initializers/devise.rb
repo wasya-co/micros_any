@@ -26,15 +26,9 @@ Devise.setup do |config|
 
   config.sign_out_via = :delete
 
-  if Rails.env.production? || true
-    config.omniauth( :keycloak_openid, "wco", client_options: {
-      site: "https://auth.wasya.co", realm: "wco", base_url: '' },
-      strategy_class: OmniAuth::Strategies::KeycloakOpenId )
-  else
-    config.omniauth( :keycloak_openid, "my-client", client_options: {
-      site: "http://localhost:8010", realm: "my-realm", base_url: '' },
-      strategy_class: OmniAuth::Strategies::KeycloakOpenId )
-  end
+  config.omniauth :keycloak_openid, "wco", client_options: {
+    site: "https://auth.wasya.co", realm: "wco", base_url: '' },
+    :strategy_class => OmniAuth::Strategies::KeycloakOpenId
 
   config.responder.error_status = :unprocessable_entity
   config.responder.redirect_status = :see_other

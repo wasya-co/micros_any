@@ -1,4 +1,4 @@
-//= link_tree ../images
+
 //= link_directory ../stylesheets .css
-//= link wco_hosting/application.css
+//= link iron_warbler/application.css
 
