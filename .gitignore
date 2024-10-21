@@ -4,6 +4,7 @@
 
 /config/initializers/0*
 /config/initializers/action_mailer.rb
+/config/mongoid.yml
 /config/master.key
 /config/mongoid.yml
 

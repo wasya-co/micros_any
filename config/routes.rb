@@ -5,8 +5,8 @@ Rails.application.routes.draw do
   get 'test-exception', to: 'application#test_exception'
 
 
-  mount Iro::Engine,      :at => '/trading'
-  mount Wco::Engine,      :at => '/wco'
+  mount Wco::Engine,        at: '/wco'
+  mount WcoHosting::Engine, at: '/hosting'
 
   devise_for :users, controllers: {
     omniauth_callbacks: 'users/omniauth_callbacks',

@@ -17,4 +17,32 @@ class ApplicationController < ActionController::Base
   ##
   private
 
+  ## v0.1.0
+  def flash_alert what
+    # puts! what, 'what'
+
+    flash[:alert] ||= []
+    if String == what.class
+      str = what
+    elsif Array == what.class
+      what.each do |wha|
+        flash[:alert] << wha
+      end
+    else
+      str = "Cannot create/update #{what.class.name}: #{what.errors.full_messages.join(', ')} ."
+      flash[:alert] << str
+    end
+  end
+
+  def flash_notice what
+    flash[:notice] ||= []
+    if String == what.class
+      str = what
+    else
+      str = "Created/updated #{what.class.name} ."
+    end
+    flash[:notice] << str
+  end
+
+
 end

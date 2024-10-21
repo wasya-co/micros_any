@@ -2,12 +2,12 @@
 %html
   %head
     %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
-    %title #{@page_title} | Micros Trading
+    %title #{@page_title} | Micros All
     %meta{content: "width=device-width,initial-scale=1", name: "viewport"}
     = csrf_meta_tags
     = csp_meta_tag
-    -# = stylesheet_link_tag 'application', media: 'all'
-    -# = javascript_tag 'application'
+    = stylesheet_link_tag 'application', media: 'all'
+    = javascript_tag 'application'
 
   %body
     %h5 Micros Trading

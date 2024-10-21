@@ -1,4 +1,9 @@
 
-%h5 Hello. Main app: #{link_to 'trading', '/trading' }
+%h5 Hello.
 
+%ul
+  %li= link_to 'trading', '/trading'
+  %li= link_to 'hosting', '/hosting'
+
+%hr
 = current_user.inspect
