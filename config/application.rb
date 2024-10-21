@@ -19,6 +19,11 @@ require "sprockets/railtie"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+
+ActiveSupport.on_load(:action_controller) do
+  wrap_parameters format: [:json]
+end
+
 module MicrosHosting
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.

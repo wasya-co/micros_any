@@ -26,7 +26,8 @@ Devise.setup do |config|
 
   config.sign_out_via = :delete
 
-  config.omniauth :keycloak_openid, "wco", client_options: {
+                                    ## the client.
+  config.omniauth :keycloak_openid, "wco_hosting", client_options: {
     site: "https://auth.wasya.co", realm: "wco", base_url: '' },
     :strategy_class => OmniAuth::Strategies::KeycloakOpenId
 
