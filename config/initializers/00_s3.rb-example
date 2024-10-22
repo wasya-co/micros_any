@@ -1,0 +1,7 @@
+
+::S3_CREDENTIALS ||= {
+  access_key_id: "",
+  secret_access_key: "",
+  bucket: "micros-hosting-development",
+  region: 'us-east-1',
+}
