@@ -123,6 +123,8 @@ GEM
       thread_safe (~> 0.3, >= 0.3.1)
     base64 (0.2.0)
     bcrypt (3.1.20)
+    bcrypt_pbkdf (1.1.1)
+    bcrypt_pbkdf (1.1.1-x86_64-darwin)
     bigdecimal (3.1.8)
     bindata (2.4.15)
     bindex (0.8.1)
@@ -170,6 +172,7 @@ GEM
       kartograph (~> 0.2.8)
       resource_kit (~> 0.1.5)
       virtus (>= 1.0.3, <= 3)
+    ed25519 (1.3.0)
     errbase (0.2.2)
     erubi (1.12.0)
     exception_notification (4.5.0)
@@ -440,9 +443,11 @@ PLATFORMS
 DEPENDENCIES
   ahoy_matey
   bcrypt (~> 3.1.7)
+  bcrypt_pbkdf (~> 1.1.0)
   byebug
   capistrano
   devise (~> 4.9.3)
+  ed25519 (~> 1.3.0)
   exception_notification
   irb (>= 1.2.8)
   jbuilder (~> 2.7)
