@@ -1,3 +1,3 @@
 
-server '178.128.129.12', :user => 'root',
+server 'do3', :user => 'root',
   :roles => [ :db, :web ], :primary => true

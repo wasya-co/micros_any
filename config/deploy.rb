@@ -1,4 +1,4 @@
-lock "~> 3.18.0"
+lock "~> 3.19.1"
 
 set :application, "micros_email"
 set :repo_url,    "git@github.com:wasya-co/micros_email.git"
