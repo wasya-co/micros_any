@@ -402,7 +402,7 @@ GEM
     sshkit (1.21.6)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
-    stringio (3.1.0)
+    stringio (3.1.1)
     stripe (10.4.0)
     strscan (3.1.0)
     temple (0.10.3)
@@ -462,6 +462,7 @@ DEPENDENCIES
   rails (~> 6.1.0)
   sass-rails
   sidekiq
+  stringio (~> 3.1.1)
   wco_models!
   web-console (>= 4.1.0)
 
