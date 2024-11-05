@@ -6,7 +6,6 @@ Devise.setup do |config|
 
   require 'devise/orm/mongoid'
 
-
   config.case_insensitive_keys = [:email]
 
   config.strip_whitespace_keys = [:email]
@@ -27,10 +26,10 @@ Devise.setup do |config|
 
   config.sign_out_via = :delete
 
-  ##                                 client?
+  ##                                 client
   config.omniauth :keycloak_openid, "wco_email", client_options: {
     site: "https://auth.wasya.co", realm: "wco", base_url: '' },
-    strategy_class: OmniAuth::Strategies::KeycloakOpenId
+    :strategy_class => OmniAuth::Strategies::KeycloakOpenId
 
   config.responder.error_status = :unprocessable_entity
   config.responder.redirect_status = :see_other

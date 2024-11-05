@@ -1,9 +1,21 @@
 
-/.bundle
+.bundle
 .byebug_history
 
-# Ignore master key for decrypting credentials and more.
+/config/initializers/0*
+!/config/initializers/0*-example
+/config/initializers/action_mailer.rb
+/config/mongoid.yml
 /config/master.key
+/config/mongoid.yml
+
+/db/*.sqlite3
+/db/*.sqlite3-*
+
+.env*
+
+/log/*
+!/log/.keep
 
 /db/*.sqlite3
 /db/*.sqlite3-*
@@ -20,7 +32,6 @@
 /public/packs
 /public/packs-test
 
-# Ignore uploaded files in development.
 /storage/*
 !/storage/.keep
 
@@ -28,7 +39,6 @@
 /tmp/*
 !/tmp/.keep
 /tmp/pids/*
-!/tmp/pids/
 !/tmp/pids/.keep
 *trash
 
@@ -42,4 +52,7 @@ wco_email_rb
 yarn-debug.log*
 .yarn-integrity
 
-zenv
+/vendor/bundle
+/volumes/*
+!/volumes/.keep
+

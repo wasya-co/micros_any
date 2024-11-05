@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -ex
+
+image_name=`node -pe "JSON.parse(require('fs').readFileSync('./config.json').toString()).image_name"`
+container_id=`docker ps | grep $image_name|cut -d' ' -f 1`
+
+docker kill $container_id
+
+# set +ex
+# echo ok
+

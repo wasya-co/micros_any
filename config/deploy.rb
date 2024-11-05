@@ -1,24 +1,19 @@
 lock "~> 3.19.1"
 
-set :application, "micros_email"
+set :application, "micros_trading"
 set :repo_url,    "git@github.com:wasya-co/micros_email.git"
-set :branch,      ENV['BRANCH'] || 'email-0.0.1'
+set :branch,      ENV['BRANCH'] || 'trading-0.0.0'
 set :deploy_via,  :remote_cache
-set :deploy_to,   "/opt/projects/micros_email"
+set :deploy_to,   "/opt/projects/micros_trading"
 
-append :linked_files, ".bundle/config", # github key
+append :linked_files, "log/production.log",
+  "config/master.key",
+  "config/mongoid.yml",
   "config/initializers/00_s3.rb",
-  "config/initializers/05_stripe.rb",
+  # "config/initializers/05_stripe.rb",
   "config/initializers/08_integrations.rb",
-  "config/initializers/09_action_mailer.rb",
-
-  "log/nginx-production.log",
-  "log/production.log",
-  "log/rea-production.log",
-  "log/roa-production.log",
-  "log/sendctxs-production.log",
-
-  "config/mongoid.yml"
+  "config/initializers/action_mailer.rb",
+  ".bundle/config"
 
 namespace :deploy do
   task :bundle do
@@ -47,6 +42,12 @@ namespace :deploy do
       execute "service wco_email_send_contexts restart"
       execute "service wco_email_run_email_actions restart"
       execute "service wco_run_office_actions restart"
+    end
+  end
+
+  task :create_indexes do
+    on roles(:web) do
+      execute "cd #{fetch(:deploy_to)}/current && RAILS_ENV=production /root/.rbenv/shims/bundle exec rake db:mongoid:create_indexes "
     end
   end
 end

@@ -1,0 +1,14 @@
+
+development: &development
+  clients:
+    default:
+      database: micros_hosting_development
+      hosts:
+        - 127.0.0.1:27037
+
+test:
+  clients:
+    default:
+      database: micros_hosting_test
+      hosts:
+        - 127.0.0.1:27037

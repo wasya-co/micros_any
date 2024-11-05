@@ -48,13 +48,8 @@ Rails.application.configure do
   # config.action_mailer.raise_delivery_errors = false
 
   config.i18n.fallbacks = true
-
   config.active_support.deprecation = :notify
-
-  # Log disallowed deprecations.
   config.active_support.disallowed_deprecation = :log
-
-  # Tell Active Support which deprecation messages to disallow.
   config.active_support.disallowed_deprecation_warnings = []
 
   # Use a different logger for distributed setups.

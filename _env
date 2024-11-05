@@ -1,15 +1,8 @@
 
 ##
-## email.local:3002
+## email.local
 ##
 
 export PORT=3004
 
 
-# export WP_HOST=https://piousbox.com
-# export WP_USERNAME=art-donor
-# export WP_PASSWORD=<the-password>
-
-# export WP_HOST=http://localhost:8019
-# export WP_USERNAME=piousbox
-# export WP_PASSWORD=test1234

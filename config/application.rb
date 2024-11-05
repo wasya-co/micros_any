@@ -8,9 +8,12 @@ require "sprockets/railtie"
 
 Bundler.require(*Rails.groups)
 
-require 'wco_models'
 
-module MicrosEmail
+ActiveSupport.on_load(:action_controller) do
+  wrap_parameters format: [:json]
+end
+
+module MicrosHosting
   class Application < Rails::Application
     config.load_defaults 6.1
 
@@ -38,13 +41,13 @@ def json_puts! a, b=''
   STDOUT.flush
 end
 
-def puts! a, b=''
-  puts "+++ +++ #{b}:"
-  puts a.inspect
-end
-
 def print! a, b=''
   puts "+++ #{b}:"
   print a
   STDOUT.flush
+end
+
+def puts! a, b=''
+  puts "+++ +++ #{b}:"
+  puts a.inspect
 end

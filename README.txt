@@ -1,10 +1,7 @@
 
-== Install ==
+= Micros Hosting =
 
-  python3 -m venv zenv
-  . zenv/bin/activate
-  pip install ansible
-  ansible-playbook
+When assembled, it provides a system for administering one-click, turn-key app installs.
 
 Install data seed:
 
@@ -26,36 +23,38 @@ And run tests:
 == Troubleshoot ==
 === psych ===
 
-  apt install -y \
-    libyaml-dev
-  apt upgrade libyaml-dev
+= Install =
 
-  sudo gem update # or:
-  # gem install rubygems-update
-  # update_rubygems
-  # gem update --system
+In .bashrc:
 
-  brew install libyaml
+  alias ll='ls -lah '
+  alias dc='docker-compose ' ## or depending on the version: alias dc='docker compose '
 
-=== Selenium ===
+Run in this directory:
 
-https://googlechromelabs.github.io/chrome-for-testing/#stable
+  cp _env .env
+  cp config/initializers/00_s3.rb-example config/initializers/00_s3.rb
 
-export CHROME_VERSION=120.0.6099.109
-wget --no-verbose -O /tmp/chrome.deb https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_${CHROME_VERSION}_amd64.deb \
-  && apt install -y /tmp/chrome.deb \
-  && rm /tmp/chrome.deb
+Run in ruby interpreter:
 
-  CHROMEDRIVER_VERSION=120.0.6099.199 npm install -g chromedriver
+  p = Wco::Profile.create({ email: 'victor@piousbox.com' })
 
-From: https://www.selenium.dev/blog/2023/headless-is-going-away/
+Run docker services:
 
-  options = Selenium::WebDriver::Options.chrome(args: ['--headless=new'])
-  driver = Selenium::WebDriver.for :chrome, options: options
-  driver.get('https://selenium.dev')
-  driver.quit
+  dc up -d localstack_development
+  dc up -d mongo_development
+
+From: https://docs.localstack.cloud/getting-started/quickstart/
+Run in localstack ( First `./scripts/login_mac localstack_d` then ):
+
+  awslocal s3 mb s3://micros-hosting-development
+  awslocal s3 mb s3://micros-hosting-test
+
+
+= Develop =
 
 === keycloak ===
+
 * 2023-12-15
 * https://github.com/ccrockett/omniauth-keycloak?tab=readme-ov-file
 ** https://github.com/omniauth/omniauth
