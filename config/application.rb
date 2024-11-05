@@ -8,9 +8,12 @@ require "sprockets/railtie"
 
 Bundler.require(*Rails.groups)
 
-require 'wco_models'
 
-module MicrosContent
+ActiveSupport.on_load(:action_controller) do
+  wrap_parameters format: [:json]
+end
+
+module MicrosHosting
   class Application < Rails::Application
     config.load_defaults 6.1
 

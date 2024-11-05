@@ -3,6 +3,7 @@
 .byebug_history
 
 /config/initializers/0*
+!/config/initializers/0*-example
 /config/initializers/action_mailer.rb
 /config/mongoid.yml
 /config/master.key
@@ -52,4 +53,6 @@ yarn-debug.log*
 .yarn-integrity
 
 /vendor/bundle
+/volumes/*
+!/volumes/.keep
 
