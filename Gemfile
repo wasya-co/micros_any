@@ -46,6 +46,6 @@ end
 group :development do
   gem 'capistrano'
   gem 'rack-mini-profiler', '~> 2.0'
-  gem 'web-console', '>= 4.1.0'
+  gem 'web-console',        '>= 4.1.0'
 end
 
