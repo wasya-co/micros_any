@@ -21,7 +21,7 @@ GIT
 
 GIT
   remote: https://github.com/wasya-co/wco_email_rb.git
-  revision: 3e9b14056d6fa03997618383066289b59f9f7c04
+  revision: 7f1335f60075d90d68506ce6ddec9c96b309caa2
   branch: 0.0.0
   specs:
     wco_email (0.1.1.86)
@@ -587,6 +587,7 @@ DEPENDENCIES
   sass-rails
   selenium-webdriver (~> 4.9.0)
   sidekiq
+  stringio (~> 3.1.1)
   wco_email!
   wco_hosting!
   wco_models!

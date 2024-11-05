@@ -2,7 +2,7 @@
 
 Devise.setup do |config|
 
-  config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
+  config.mailer_sender = 'no-reply@wasya.co'
 
   require 'devise/orm/mongoid'
 
@@ -27,6 +27,7 @@ Devise.setup do |config|
 
   config.sign_out_via = :delete
 
+  ##                                 client?
   config.omniauth :keycloak_openid, "wco_email", client_options: {
     site: "https://auth.wasya.co", realm: "wco", base_url: '' },
     strategy_class: OmniAuth::Strategies::KeycloakOpenId

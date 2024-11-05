@@ -6,8 +6,24 @@
   pip install ansible
   ansible-playbook
 
-== Troubleshoot ==
+Install data seed:
 
+  be rake wco_email:seed
+
+Run in rails console:
+
+  p = Wco::Profile.create({ email: 'victor@piousbox.com' })
+
+For testing: link factories from wco_models.
+
+  ln -s $WCO_MODELS_ROOT/test/dummy/spec/factories.rb test/dummy/spec/factories/wco_models_factories.rb
+
+And run tests:
+
+  cd test/dummy
+  be rspec spec
+
+== Troubleshoot ==
 === psych ===
 
   apt install -y \
@@ -20,8 +36,6 @@
   # gem update --system
 
   brew install libyaml
-
-== Troubleshoot ==
 
 === Selenium ===
 

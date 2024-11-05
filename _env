@@ -1,5 +1,10 @@
 
-export PORT=3002
+##
+## email.local:3002
+##
+
+export PORT=3004
+
 
 # export WP_HOST=https://piousbox.com
 # export WP_USERNAME=art-donor
