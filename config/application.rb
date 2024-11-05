@@ -1,4 +1,3 @@
-require_relative "boot"
 
 require "active_model/railtie"
 require "active_job/railtie"
@@ -16,12 +15,33 @@ module MicrosContent
     config.load_defaults 6.1
 
     config.generators.system_tests = nil
+    config.encoding = "utf-8"
 
     config.generators do |g|
       g.orm :mongoid
     end
 
+    config.time_zone = 'Central Time (US & Canada)'
   end
+end
+
+Rails.application.config.middleware.insert_before 0, Rack::Cors do
+  allow do
+    origins '*'
+    resource '*', headers: :any, methods: [:get, :post, :patch, :put]
+  end
+end
+
+def json_puts! a, b=''
+  puts "+++ #{b}:"
+  print JSON.pretty_generate( a )
+  STDOUT.flush
+end
+
+def print! a, b=''
+  puts "+++ #{b}:"
+  print a
+  STDOUT.flush
 end
 
 def puts! a, b=''

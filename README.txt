@@ -1,6 +1,11 @@
 
 == Install ==
 
+  python3 -m venv zenv
+  . zenv/bin/activate
+  pip install ansible
+  ansible-playbook
+
 == Troubleshoot ==
 
 === psych ===
@@ -14,6 +19,9 @@
   # update_rubygems
   # gem update --system
 
+  brew install libyaml
+
+== Troubleshoot ==
 
 === Selenium ===
 

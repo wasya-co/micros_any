@@ -1,17 +1,15 @@
 
-.bundle
+/.bundle
 .byebug_history
 
-chromedriver
-/config/initializers/0*
+# Ignore master key for decrypting credentials and more.
 /config/master.key
-/config/mongoid.yml
 
 /db/*.sqlite3
 /db/*.sqlite3-*
-.DS_Store
 
-.env*
+/.env
+
 
 /log/*
 !/log/.keep
@@ -22,21 +20,26 @@ chromedriver
 /public/packs
 /public/packs-test
 
+# Ignore uploaded files in development.
 /storage/*
 !/storage/.keep
+
 
 /tmp/*
 !/tmp/.keep
 /tmp/pids/*
+!/tmp/pids/
 !/tmp/pids/.keep
 *trash
+
+vendor
+volumes/*
+!volumes/.keep
+
+wco_email_rb
 
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
 
-vendor
-
-w
-
-
+zenv

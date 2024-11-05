@@ -2,6 +2,12 @@
 Rails.application.config.assets.version = '1.0'
 
 Rails.application.config.assets.precompile += %w(
-  wco/application.js
-  wco/application.css
+  application_bootstrap.js
+  application_bootstrap.css
+
+  wco_models/application.js
+  wco_models/application.css
+
+  wco_email/application.js
+  wco_email/application.css
 );
