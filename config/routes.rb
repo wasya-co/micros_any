@@ -7,6 +7,9 @@ require 'sidekiq/web'
 
 Rails.application.routes.draw do
   root to: 'application#home'
+  devise_for :users, controllers: {
+    omniauth_callbacks: 'users/omniauth_callbacks',
+  }
 
   get '/sections/carousel',   to: 'application#sections_carousel'
   get '/sections/one', to: 'application#sections_one'
@@ -24,9 +27,9 @@ Rails.application.routes.draw do
   post '/api/email/messages/from-ses', to: 'wco_email/api#create_email_message'
   get  '/api/obf/:id',                 to: 'wco/api/obfuscated_redirects#show', as: :obf
 
-  devise_for :users, controllers: {
-    omniauth_callbacks: 'users/omniauth_callbacks',
-  }
-  resources :users
 
+
+  get 'test-exception', to: 'application#test_exception'
+
+  resources :users
 end

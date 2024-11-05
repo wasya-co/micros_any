@@ -1,24 +1,19 @@
 lock "~> 3.19.1"
 
-set :application, "micros_content"
-set :repo_url,    "git@github.com:wasya-co/micros_any.git"
-set :branch,      ENV['BRANCH'] || 'content-0.1.0'
+set :application, "micros_trading"
+set :repo_url,    "git@github.com:wasya-co/micros_email.git"
+set :branch,      ENV['BRANCH'] || 'trading-0.0.0'
 set :deploy_via,  :remote_cache
-set :deploy_to,   "/opt/projects/micros_content"
+set :deploy_to,   "/opt/projects/micros_trading"
 
-append :linked_files, ".bundle/config", # github key
+append :linked_files, "log/production.log",
+  "config/master.key",
+  "config/mongoid.yml",
   "config/initializers/00_s3.rb",
-  "config/initializers/05_stripe.rb",
+  # "config/initializers/05_stripe.rb",
   "config/initializers/08_integrations.rb",
-  "config/initializers/09_action_mailer.rb",
-
-  "log/nginx-production.log",
-  "log/production.log",
-  "log/rea-production.log",
-  "log/roa-production.log",
-  "log/sendctxs-production.log",
-
-  "config/mongoid.yml"
+  "config/initializers/action_mailer.rb",
+  ".bundle/config"
 
 namespace :deploy do
   task :bundle do
