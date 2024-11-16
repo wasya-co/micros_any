@@ -25,9 +25,13 @@
 
 === Selenium ===
 
+  ## Trash, didn't work:
+  # brew install chromedriver -cask
+
 https://googlechromelabs.github.io/chrome-for-testing/#stable
 
 export CHROME_VERSION=120.0.6099.109
+export CHROME_VERSION=131.0.6778.69
 wget --no-verbose -O /tmp/chrome.deb https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_${CHROME_VERSION}_amd64.deb \
   && apt install -y /tmp/chrome.deb \
   && rm /tmp/chrome.deb
