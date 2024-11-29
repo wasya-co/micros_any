@@ -47,21 +47,22 @@ Capybara.register_driver :local_selenium_headless do |app|
   Capybara::Selenium::Driver.new(app, browser: :chrome, options: options)
 end
 
-Capybara.default_driver = :remote_selenium_headless
+Capybara.default_driver = :local_selenium
 Capybara.default_max_wait_time = 100 # seconds
 
 RSpec.describe 'wco contact_us form' do
 
   before :all do
-    # options = Selenium::WebDriver::Options.chrome(args: ['--headless=new'])
-    # @driver = Selenium::WebDriver.for :chrome, options: options
+    ## 2024-11-28 :: Currently using this.
+    options = Selenium::WebDriver::Options.chrome(args: ['--headless=new'])
+    @driver = Selenium::WebDriver.for :chrome, options: options
 
-    ## From: https://www.selenium.dev/documentation/webdriver/drivers/remote_webdriver/
-    options = Selenium::WebDriver::Options.chrome
-    @driver = Selenium::WebDriver.for( :remote, {
-      url: "http://#{SELENIUM_HOST}:4444/wd/hub",
-      options: options,
-    })
+    ## 2024-11-27 :: From: https://www.selenium.dev/documentation/webdriver/drivers/remote_webdriver/
+    # options = Selenium::WebDriver::Options.chrome
+    # @driver = Selenium::WebDriver.for( :remote, {
+    #   url: "http://#{SELENIUM_HOST}:4444/wd/hub",
+    #   options: options,
+    # })
   end
 
   it 'sanity' do

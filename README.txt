@@ -47,7 +47,3 @@ From: https://www.selenium.dev/blog/2023/headless-is-going-away/
   driver.get('https://selenium.dev')
   driver.quit
 
-=== keycloak ===
-* 2023-12-15
-* https://github.com/ccrockett/omniauth-keycloak?tab=readme-ov-file
-** https://github.com/omniauth/omniauth
