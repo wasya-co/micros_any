@@ -2,7 +2,7 @@ lock "~> 3.19.1"
 
 set :application, "micros_email"
 set :repo_url,    "git@github.com:wasya-co/micros_email.git"
-set :branch,      ENV['BRANCH'] || 'email-0.0.1'
+set :branch,      ENV['BRANCH'] || 'email-0.0.2'
 set :deploy_via,  :remote_cache
 set :deploy_to,   "/opt/projects/micros_email"
 
