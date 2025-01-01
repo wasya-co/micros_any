@@ -8,24 +8,11 @@ SELENIUM_HOST=192.168.86.21
   pip install ansible
   ansible-playbook
 
-== Troubleshoot ==
-
-=== psych ===
-
-  apt install -y \
-    libyaml-dev
-  apt upgrade libyaml-dev
-
-  sudo gem update # or:
-  # gem install rubygems-update
-  # update_rubygems
-  # gem update --system
-
-  brew install libyaml
-
-== Troubleshoot ==
+== Test ==
 
 === Selenium ===
+
+  java -jar selenium-server-4.26.0.jar standalone
 
   export TEST_PASSWD=<>
   export SELENIUM_HOST=192.168.86.21
@@ -46,4 +33,19 @@ From: https://www.selenium.dev/blog/2023/headless-is-going-away/
   driver = Selenium::WebDriver.for :chrome, options: options
   driver.get('https://selenium.dev')
   driver.quit
+
+== Troubleshoot ==
+
+=== psych ===
+
+  apt install -y \
+    libyaml-dev
+  apt upgrade libyaml-dev
+
+  sudo gem update # or:
+  # gem install rubygems-update
+  # update_rubygems
+  # gem update --system
+
+  brew install libyaml
 
