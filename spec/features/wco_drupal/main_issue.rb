@@ -4,8 +4,8 @@ require 'capybara/rspec'
 
 Capybara.register_driver :current_selenium_driver do |app|
   options = Selenium::WebDriver::Chrome::Options.new
-  options.add_argument("--window-size=640,2000")
-  options.add_argument("--headless")
+  options.add_argument("--window-size=502,2000")
+  # options.add_argument("--headless")
   options.add_argument("--disable-dev-shm-usage")
   Capybara::Selenium::Driver.new(app, browser: :chrome, options: options)
 end
@@ -27,8 +27,21 @@ RSpec.describe 'wasya_co main issue' do
   ## From: https://stackoverflow.com/questions/11198882/how-do-you-test-if-a-div-has-a-certain-css-style-in-rspec-capybara
   ## From: https://www.rubydoc.info/github/jnicklas/capybara/Capybara%2FNode%2FMatchers:assert_matches_style
   it 'asserts matches style' do
-    visit 'https://wasya.co/issues/2024q1-issue'
-    find('.layout--twocol').assert_matches_style('width', '640px')
+    url = 'https://wasya.co/issues/2024q1-issue'
+    # url = 'http://wco.local:8091/issues/2024q1-issue'
+    visit url
+
+    body_el = find('body')
+    body_width = body_el.style('width')['width']
+    # puts! body_width, 'body_width'
+
+    find_all('.layout > .row').each do |el|
+      el.assert_matches_style({ 'width' => body_width })
+      print '.'
+    end
+
+    puts! 'ok'
+    # byebug
   end
 
 end
