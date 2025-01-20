@@ -21,7 +21,7 @@ GIT
 
 GIT
   remote: https://github.com/wasya-co/wco_email_rb.git
-  revision: b2250c96370f6205cc07bb2732f75f11756dfe77
+  revision: 60d57f17bc249496655d01e97664e56624cff287
   branch: 0.0.0
   specs:
     wco_email (0.1.1.89)
@@ -70,7 +70,7 @@ GIT
 
 GIT
   remote: https://github.com/wasya-co/wco_models.git
-  revision: a073c590f3fdd88f2d3eb7e872fcaa2e414a1648
+  revision: f106d061df3d37dcb2a97c8e77a325861939aac1
   branch: 3.2.0
   specs:
     wco_models (3.1.0.189)

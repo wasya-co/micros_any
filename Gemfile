@@ -44,7 +44,7 @@ group :development, :test do
   gem 'irb', '>= 1.2.8'
   gem 'rspec-rails'
   gem 'selenium-webdriver', "~> 4.9.0"
-  gem 'capybara-full_screenshot'
+
 
   ## From: https://stackoverflow.com/questions/24004728/getting-selenium-webdriver-to-use-chrome-in-rspec-rails
   # gem 'chromedriver-helper'
@@ -56,4 +56,9 @@ group :development do
   gem 'rack-mini-profiler', '~> 2.0'
   gem 'web-console', '>= 4.1.0'
 end
+
+group :test do
+  gem 'capybara-full_screenshot'
+end
+
 
