@@ -13,7 +13,7 @@ end
 Capybara.default_driver = :current_selenium_driver
 Capybara.default_max_wait_time = 10 # seconds
 
-RSpec.describe 'wasya_co main issue' do
+RSpec.describe 'wasya_co main issue (style)' do
   before :all do
     options = Selenium::WebDriver::Options.chrome(args: ['--headless=new'])
     @driver = Selenium::WebDriver.for :chrome, options: options
@@ -26,7 +26,7 @@ RSpec.describe 'wasya_co main issue' do
 
   ## From: https://stackoverflow.com/questions/11198882/how-do-you-test-if-a-div-has-a-certain-css-style-in-rspec-capybara
   ## From: https://www.rubydoc.info/github/jnicklas/capybara/Capybara%2FNode%2FMatchers:assert_matches_style
-  it 'asserts matches style' do
+  it 'body width is no more than 100%' do
     url = 'https://wasya.co/issues/2024q1-issue'
     # url = 'http://wco.local:8091/issues/2024q1-issue'
     visit url
@@ -41,7 +41,6 @@ RSpec.describe 'wasya_co main issue' do
     end
 
     puts! 'ok'
-    # byebug
   end
 
 end
