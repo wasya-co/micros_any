@@ -1,14 +1,8 @@
 
 require 'capybara/rspec'
+require 'capybara_helper'
 
-Capybara.register_driver :local_selenium do |app|
-  options = Selenium::WebDriver::Chrome::Options.new
-  options.add_argument("--window-size=1400,700")
-  # options.add_argument("--remote-debugging-port=9222")
-
-  Capybara::Selenium::Driver.new(app, browser: :chrome, options: options)
-end
-Capybara.default_driver = :local_selenium
+Capybara.default_driver = :local_selenium_headless
 Capybara.default_max_wait_time = 10 # seconds
 
 RSpec.describe 'scrape zerohedge frontpage' do
@@ -36,7 +30,11 @@ RSpec.describe 'scrape zerohedge frontpage' do
     @article = {}
     visit ENV['URL']
 
-    @article[:title]  = find("[class^='ArticleFull_header__']").find('h1').text
+    begin
+      @article[:title]  = find("[class^='ArticleFull_header__']").find('h1').text
+    rescue Capybara::ElementNotFound => err
+      @article[:title]  = find("[class^='ContributorArticleFull_header__']").find('h1').text
+    end
     @article[:html]   = find("[class^='NodeContent_body__']")['innerHTML'] ## @article[:html] = find("[class^='NodeBody_container__']")['innerHTML']
     @article[:text]   = find("[class^='NodeContent_body__']").text.gsub(/\n/, "\n\n")
 
