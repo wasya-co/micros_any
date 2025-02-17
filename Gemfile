@@ -58,7 +58,8 @@ group :development do
 end
 
 group :test do
-  gem 'capybara-full_screenshot'
+  # gem 'capybara-full_screenshot'
+  # gem 'capybara-screenshot'
 end
 
 

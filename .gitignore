@@ -26,7 +26,6 @@
 # Ignore uploaded files in development.
 /storage/*
 !/storage/.keep
-selenium-server-4.26.0.jar
 
 /tmp/*
 !/tmp/.keep

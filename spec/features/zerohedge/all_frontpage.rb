@@ -1,38 +1,36 @@
 
 require 'capybara/rspec'
+require "selenium-webdriver"
+require 'capybara_helper'
 
-Capybara.register_driver :local_selenium do |app|
-  options = Selenium::WebDriver::Chrome::Options.new
-  options.add_argument("--window-size=1400,700")
-  # options.add_argument("--remote-debugging-port=9222")
-
-  Capybara::Selenium::Driver.new(app, browser: :chrome, options: options)
-end
-Capybara.default_driver = :local_selenium
 Capybara.default_max_wait_time = 10 # seconds
 
 RSpec.describe 'scrape zerohedge frontpage' do
 
   before :all do
-    ## Works, non-remote : )
-    options = Selenium::WebDriver::Options.chrome(args: ['--headless=new'])
-    @driver = Selenium::WebDriver.for :chrome, options: options
+    ## Works, non-remote
+    # Capybara.default_driver = :local_selenium_headless
+    # options = Selenium::WebDriver::Options.chrome(args: ['--headless=new'])
+    # @driver = Selenium::WebDriver.for :chrome, options: options
 
-    ## Works, remote
-    # options = Selenium::WebDriver::Options.chrome
-    # options.add_argument("--remote-debugging-port=9222")
-    # @driver = Selenium::WebDriver.for( :remote, {
-    #   url: "http://#{SELENIUM_HOST}:4444/wd/hub",
-    #   options: options,
-    # })
+    ## semi-works, remote
+    Capybara.default_driver = :remote_selenium_headless
+    options = Selenium::WebDriver::Options.chrome(args: ['--headless=new'])
+    options.add_argument("--remote-debugging-port=9222")
+    options.add_argument("--window-size=1400,1400")
+    @driver = Selenium::WebDriver.for( :remote, {
+      url: "http://#{SELENIUM_HOST}:4444/wd/hub",
+      options: options,
+    })
   end
 
   it 'sanity' do
     @headlines = []
-
     visit 'https://www.zerohedge.com/'
 
-    all("div[class^='ContributorArticleFeatured_container__'").each do |item|
+    all("div[class^='ContributorArticleFeatured_container__']").each do |item|
+      puts! item, 'item'
+
       @headlines.push({
         title:    item.find('h2').text,
         link:     item.find('h2 a')['href'],
@@ -41,7 +39,7 @@ RSpec.describe 'scrape zerohedge frontpage' do
       })
     end
 
-    all("div[class^='Article_stickyContainer__'").each do |item|
+    all("div[class^='Article_stickyContainer__']").each do |item|
       @headlines.push({
         title: item.find('h2').text,
         link:     item.find('h2 a')['href'],
@@ -49,7 +47,7 @@ RSpec.describe 'scrape zerohedge frontpage' do
       })
     end
 
-    all("div[class^='Article_nonStickyContainer__'").each do |item|
+    all("div[class^='Article_nonStickyContainer__']").each do |item|
       @headlines.push({
         title: item.find('h2').text,
         link:     item.find('h2 a')['href'],

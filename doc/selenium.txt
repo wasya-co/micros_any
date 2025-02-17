@@ -4,7 +4,7 @@
   java -jar selenium-server-4.26.0.jar standalone
 
   export TEST_PASSWD=<>
-  export SELENIUM_HOST=192.168.86.21
+  export SELENIUM_HOST=192.168.10.143
   be rspec spec/features/wco_drupal/contact_us_form.rb
 
 https://googlechromelabs.github.io/chrome-for-testing/#stable
